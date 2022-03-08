@@ -1,7 +1,14 @@
 <script setup>
+import TopHeader from './components/topHeader.vue'
+import BottomFooter from './components/bottomFooter.vue'
 </script>
 
 <template>
-<h1 class=" text-center text-3xl text-blue-500 font-mono">Hello</h1>
-  <router-view />
+<header class="shadow-md">
+  <TopHeader/>
+</header>
+<router-view />
+<footer>
+  <BottomFooter/>
+</footer>
 </template>
