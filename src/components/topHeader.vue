@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative md:static p-4 flex items-center justify-between md:bg-transparent mx-auto max-w-7xl"
+    class="p-4 flex items-center justify-between md:bg-transparent mx-auto max-w-7xl"
     :class="{ 'bg-indigo-50': menu }"
   >
     <figure class="text-xl">
@@ -21,7 +21,7 @@
         v-for="link in list"
         :key="link.url"
         :to="link.url"
-        class="text-blue-400 hover:underline hover:opacity-80 transition-opacity block md:inline-block align-middle md:mx-2 p-2 md:p-0"
+        class="text-sky-400 hover:underline hover:opacity-80 transition-opacity block md:inline-block align-middle md:mx-2 p-2 md:p-0"
       >
         <li>{{ link.name }}</li>
       </router-link>
