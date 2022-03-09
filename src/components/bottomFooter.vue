@@ -10,10 +10,7 @@
 <script setup>
 
 let list = [{
-  name: '關於',
+  name: 'Side Projects',
   url: '/about'
-}, {
-  name: '標籤',
-  url: '/tags'
 }]
 </script>

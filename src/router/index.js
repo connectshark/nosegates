@@ -15,10 +15,16 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/tags',
-      name: 'tags',
-      component: () => import('../views/TagsView.vue')
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue')
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: {
+        name: 'home'
+      }
+    }
   ]
 })
 

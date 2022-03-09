@@ -4,7 +4,10 @@
     :class="{ 'bg-indigo-50': menu }"
   >
     <figure class="text-xl">
-      <router-link to="/">
+      <router-link
+        @click="menu = false"
+        to="/"
+      >
         <img class="max-w-max w-6 inline-block align-middle" src="../assets/logo.jpg" alt="logo" />
         <figcaption class="inline-block align-middle">Nosegates</figcaption>
       </router-link>
@@ -18,6 +21,7 @@
       class="md:block absolute md:static top-full left-0 py-4 px-6 md:py-2 md:px-2 bg-indigo-50 md:bg-transparent w-full md:w-auto"
     >
       <router-link
+        @click="menu = false"
         v-for="link in list"
         :key="link.url"
         :to="link.url"
@@ -34,10 +38,7 @@ import { ref } from 'vue'
 
 const menu = ref(false)
 let list = [{
-  name: '關於',
+  name: 'Side Projects',
   url: '/about'
-}, {
-  name: '標籤',
-  url: '/tags'
 }]
 </script>

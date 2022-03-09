@@ -19,36 +19,42 @@
           <router-link
             class="bg-sky-400 inline-block hover:underline text-white p-2 rounded-lg"
             to="about"
-          >About Me</router-link>
+          >Side Projects</router-link>
         </p>
       </div>
     </section>
     <section class="p-10">
       <h2 class="text-xl text-center">Articles</h2>
       <div>
-        <ul class=" grid grid-cols-1 md:grid-cols-2 gap-5">
-          <li class=" text-center" v-for="article in articles" :key="article.link">
-            <a class=" hover:bg-sky-600 hover:text-white border border-sky-600 rounded-xl block mb-4 p-2 text-sky-600" :href="article.link">{{article.name}}<i class='bx bx-link-external'></i></a>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <li class="text-center" v-for="article in articles" :key="article.link">
+            <a
+              class="hover:bg-sky-600 hover:text-white border border-sky-600 rounded-xl block mb-4 p-2 text-sky-600"
+              :href="article.link"
+            >
+              {{ article.name }}
+              <i class="bx bx-link-external"></i>
+            </a>
           </li>
         </ul>
       </div>
     </section>
-    <!-- <section class="p-10">
+    <section class="p-10">
       <h2 class="text-xl text-center">Contact me</h2>
       <div>
-        <ol class=" grid grid-cols-2 grid-rows-2">
+        <ol class="grid grid-cols-2 grid-rows-2">
           <li
-            class=" w-9 mx-auto hover:bg-sky-400 hover:text-white transition-colors rounded-lg text-sky-400 bg-white text-center"
+            class="w-9 mx-auto hover:bg-sky-400 hover:text-white transition-colors rounded-lg text-sky-400 bg-white text-center"
             v-for="social in socials"
             :key="social.icon"
           >
-          <a :href="social.link" class=" block" target="_blank">
-            <i class="bx text-3xl align-middle" :class="social.icon"></i>
-          </a>
+            <a :href="social.link" class="block" target="_blank">
+              <i class="bx text-3xl align-middle" :class="social.icon"></i>
+            </a>
           </li>
         </ol>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
