@@ -31,6 +31,7 @@
             <a
               class="hover:bg-sky-600 hover:text-white border border-sky-600 rounded-xl block mb-4 p-2 text-sky-600"
               :href="article.link"
+              target="_blank"
             >
               {{ article.name }}
               <i class="bx bx-link-external"></i>
