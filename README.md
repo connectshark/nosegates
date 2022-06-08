@@ -1,7 +1,10 @@
 # nosegates-v2
-[![build status](https://github.com/connectshark/nosegates-v2/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/connectshark/nosegates-v2/actions/workflows/deploy.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/connectshark/nosegates-v2.svg?style=flat)](https://github.com/connectshark/nosegates-v2)
 ![GitHub stars](https://img.shields.io/github/stars/connectshark/nosegates-v2.svg?style=social&label=Stars&style=plastic)
+
+
+個人網站
+
 
 
 ![https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
@@ -17,4 +20,3 @@
 - pinia
 - vue-router4
 - tailwindcss
-- github action自動部署至 `gh-page`

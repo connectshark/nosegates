@@ -1,44 +1,67 @@
 <template>
-  <div
-    class="p-4 flex items-center justify-between md:bg-transparent mx-auto max-w-7xl"
-    :class="{ 'bg-indigo-50': menu }"
-  >
-    <figure class="text-xl">
-      <router-link
-        @click="menu = false"
-        to="/"
-      >
-        <img class="max-w-max w-6 inline-block align-middle" src="../assets/logo.jpg" alt="logo" />
-        <figcaption class="inline-block align-middle">Nosegates</figcaption>
+  <header class=" lg:sticky lg:bottom-auto lg:top-0 fixed bottom-0 left-0 w-full border-t-2 bg-white/50 backdrop-blur-2xl">
+    <nav class=" container mx-auto lg:p-3 p-5 flex justify-between items-center">
+      <router-link to="/">
+        <figure class=" w-8 inline-block align-middle">
+          <img loading="lazy" src="../assets/logo-s.png" alt="logo">
+        </figure>
+        <h2 class=" font-bold inline-block align-middle">Chambers</h2>
       </router-link>
-    </figure>
-    <div class="text-2xl md:hidden" @click="menu = !menu">
-      <i v-if="menu" class="align-middle bx bx-x"></i>
-      <i v-else class="align-middle bx bx-menu"></i>
-    </div>
-    <ul
-      :class="{ hidden: !menu }"
-      class="md:block absolute md:static top-full left-0 py-4 px-6 md:py-2 md:px-2 bg-indigo-50 md:bg-transparent w-full md:w-auto"
-    >
-      <router-link
-        @click="menu = false"
-        v-for="link in list"
-        :key="link.url"
-        :to="link.url"
-        class="text-sky-400 hover:underline hover:opacity-80 transition-opacity block md:inline-block align-middle md:mx-2 p-2 md:p-0"
-      >
-        <li>{{ link.name }}</li>
-      </router-link>
-    </ul>
-  </div>
+      <ul :class="{'hidden': !isOpen }" class=" bg-white lg:bg-inherit lg:border-none lg:flex lg:static lg:p-0 lg:rounded-t-none lg:w-auto lg:ml-auto lg:mr-4 grid grid-cols-3 grid-rows-2 gap-4 absolute left-0 w-full p-4 rounded-t-3xl border-t-2 transition bottom-full">
+        <li v-for="item in navGroup" :key="item.class">
+          <a @click="isOpen =false" :href="item.url" class=" p-2 text-center lg:p-0">
+            <p class=" lg:hidden text-xl"><i class='bx' :class="item.class"></i></p>
+            <p>{{ item.content }}</p>
+          </a>
+        </li>
+      </ul>
+      <div class=" space-x-4 text-xl">
+        <button><i class='bx bx-moon'></i></button>
+        <button @click="isOpen = !isOpen" class=" lg:hidden">
+          <i class='bx bx-category' :class="{ 'bx-x': isOpen, 'bx-category': !isOpen }"></i>
+        </button>
+      </div>
+    </nav>
+
+  </header>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const menu = ref(false)
-let list = [{
-  name: 'Side Projects',
-  url: '/about'
-}]
+const isOpen = ref(false)
+
+const navGroup = [
+  {
+    url: '#home',
+    class: 'bx-home',
+    content: 'Home'
+  },
+  {
+    url: '#about',
+    class: 'bx-user',
+    content: 'About'
+  },
+  {
+    url: '#skills',
+    class: 'bx-file',
+    content: 'Skills'
+  },
+  {
+    url: '#services',
+    class: 'bx-briefcase-alt',
+    content: 'Services'
+  },
+  {
+    url: '#portfolio',
+    class: 'bx-photo-album',
+    content: 'Portfolio'
+  },
+  {
+    url: '#contact',
+    class: 'bxs-contact',
+    content: 'Contactme'
+  }
+]
+
 </script>
