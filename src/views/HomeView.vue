@@ -29,17 +29,17 @@
     </div>
   </section>
 
-  <section>
+  <section class=" mb-20">
     <h2 id="about" class=" text-center text-2xl font-bold leading-loose">About me</h2>
     <p class="text-gray-500 text-center mb-10">My introduction</p>
     <div class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
       <figure class="md:w-1/2">
-        <img class="rounded-2xl object-fill max-w-xs mx-auto" src="../assets/hero.jpeg" alt="hero">
+        <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
       </figure>
       <div class="md:w-1/2 space-y-10">
         <p class="text-gray-500">Web developer, with extensive knowledge and years of experience, working in web technologies and delivering quality work.</p>
         <ul class="w-full flex items-center justify-center">
-          <li class=" text-center w-1/3" v-for="(item, i) in skills" :key="i">
+          <li class=" text-center w-1/3" v-for="(item, i) in experience" :key="i">
             <p class=" text-2xl font-bold leading-relaxed">{{ item.number }}+</p>
             <p class=" text-gray-500">{{ item.content }}</p>
             <p class=" text-gray-500">{{ item.last }}</p>
@@ -53,30 +53,34 @@
     </div>
 
   </section>
+  <section>
+    <h2 id="skills" class=" text-center text-2xl font-bold leading-loose">Skills</h2>
+    <p class="text-gray-500 text-center mb-10">My technical collection</p>
+    <div>
+      <h3></h3>
+
+    </div>
+    
+  </section>
 </main>
 </template>
 
 <script setup>
 
-const articles = [
-  {
-    link: 'https://blog.justlikeboss.com/product/toss-physiotherapy-clinic/',
-    name: '台北推薦的物理治療所'
-  },
-  {
-    link: 'https://www.instagram.com/tossphysio/',
-    name: '透視物理治療'
-  },
-  {
-    link: 'https://shp.ee/7m8ppa3',
-    name: '領取優惠券'
-  },
-  {
-    link: 'https://shopee.nosegates.com/',
-    name: '縮短所有蝦皮網址'
-  }
-]
 const skills = [
+  {
+    title: 'Frontend developer',
+    icon: 'bx-code'
+  },
+  {
+    title: 'Designer'
+  },
+  {
+    title: 'Backend developer'
+  },
+]
+
+const experience = [
   {
     number: '04',
     content: 'Years',
