@@ -24,7 +24,7 @@
       <p class=" text-gray-500 md:leading-loose mb-5">Frontend developer</p>
       <p class="text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing quality work.</p>
       <button class=" bg-primary p-4 rounded-xl text-white">
-        Contact Me <i class='bx bxs-contact'></i>
+        Contact Me <i class='bx bx-send'></i>
       </button>
     </div>
   </section>
@@ -49,16 +49,30 @@
           Download CV <i class='bx bxs-contact'></i>
         </button>
       </div>
-      
     </div>
 
   </section>
   <section>
     <h2 id="skills" class=" text-center text-2xl font-bold leading-loose">Skills</h2>
     <p class="text-gray-500 text-center mb-10">My technical collection</p>
-    <div>
-      <h3></h3>
-
+    <div class=" w-3/4 mx-auto">
+      <div v-for="(skill, index) in skills" :key="skill.title" @click="folderHandler(index)" class=" cursor-pointer w-full flex items-center justify-center mb-5 flex-wrap">
+        <span class=" w-2/12 text-primary">
+          <i class='bx text-2xl' :class="skill.icon" ></i>
+        </span>
+        <div class=" w-9/12">
+          <h3 class=" font-bold text-xl">{{ skill.title }}</h3>
+          <p class=" text-gray-500">{{ skill.subtitle }}</p>
+        </div>
+        <span :class="{ '-rotate-180' : folderIndex === index }" class=" text-center w-1/12 text-primary transition duration-500">
+          <i class='bx bx-down-arrow' ></i>
+        </span>
+        <ul v-show="folderIndex === index" class=" w-full py-4">
+          <li v-for="brand in skill.brands" class=" inline-block mx-4 text-primary">
+            <i class='bx text-2xl' :class="brand" ></i>
+          </li>
+        </ul>
+      </div>
     </div>
     
   </section>
@@ -66,17 +80,36 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const folderIndex = ref(null)
+
+const folderHandler = index => {
+  if (folderIndex.value === index) {
+    folderIndex.value = null
+  } else {
+    folderIndex.value = index
+  }
+}
 
 const skills = [
   {
     title: 'Frontend developer',
-    icon: 'bx-code'
+    subtitle: 'More than 3 years',
+    icon: 'bx-code-curly',
+    brands: ['bxl-javascript', 'bxl-css3', 'bxl-tailwind-css', 'bxl-vuejs', 'bxl-html5', 'bxl-git']
   },
   {
-    title: 'Designer'
+    title: 'Backend developer',
+    subtitle: 'More than 1 years',
+    icon: 'bx-code-block',
+    brands: ['bxl-postgresql', 'bxl-nodejs']
   },
   {
-    title: 'Backend developer'
+    title: 'Others',
+    subtitle: 'More other skills',
+    icon: 'bx-edit-alt',
+    brands: ['bxl-blender', 'bxl-figma']
   },
 ]
 
