@@ -1,6 +1,6 @@
 <template>
 <main>
-  <section class=" mx-auto container grid grid-cols-12 pt-5 mb-20">
+  <section class=" mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
     <div class=" col-span-2 grid place-items-center md:col-span-1">
       <div class=" space-y-4">
         <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank" rel="noopener noreferrer">
@@ -67,11 +67,13 @@
         <span :class="{ '-rotate-180' : folderIndex === index }" class=" text-center w-1/12 text-primary transition duration-500">
           <i class='bx bx-down-arrow' ></i>
         </span>
+        <Transition>
         <ul v-show="folderIndex === index" class=" w-full py-4">
           <li v-for="brand in skill.brands" class=" inline-block mx-4 text-primary">
             <i class='bx text-2xl' :class="brand" ></i>
           </li>
         </ul>
+        </Transition>
       </div>
     </div>
     
