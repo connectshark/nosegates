@@ -1,5 +1,5 @@
 <template>
-  <header class=" lg:sticky lg:bottom-auto lg:top-0 fixed bottom-0 left-0 w-full border-t-2 bg-white/50 backdrop-blur-2xl">
+  <header class=" lg:sticky lg:bottom-auto lg:top-0 fixed bottom-0 left-0 w-full border-t-2 bg-white/50 backdrop-blur-2xl z-10">
     <nav class=" container mx-auto lg:p-3 p-5 flex justify-between items-center">
       <router-link to="/">
         <figure class=" w-8 inline-block align-middle">
