@@ -1,11 +1,11 @@
 <template>
-    <li class=" shadow-lg p-8 pt-20 hover:shadow-sxl transition-shadow">
+    <li class=" shadow-lg p-4 pt-20 hover:shadow-sxl transition-shadow">
       <p class=" mb-6">
         <i class='bx text-primary text-3xl' :class="props.icon"></i>
       </p>
-      <h3 class="mb-4 text-xl">{{ props.title }}</h3>
-      <button @click="showModal = true">
-        <p class=" text-primary">View More <span><i class='bx bxs-right-arrow'></i></span></p>
+      <h3 class="mb-4 text-xl font-bold">{{ props.title }}</h3>
+      <button class=" group" @click="showModal = true">
+        <p class=" text-primary">View More <i class='bx bxs-right-arrow group-hover:translate-x-1 transition'></i></p>
       </button>
       <Teleport to="#modal">
         <transition
