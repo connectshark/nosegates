@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section id="home" class=" min-h-screen mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
+    <section id="home" class=" mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
       <div class=" col-span-2 grid place-items-center md:col-span-1">
         <div class=" space-y-4">
           <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank"
@@ -35,7 +35,7 @@
       </div>
     </section>
 
-    <section class="min-h-screen mb-20">
+    <section class="mb-20 py-20">
       <h2 id="about" class=" text-center text-2xl font-bold leading-loose">About me</h2>
       <p class="text-gray-500 text-center mb-10">My introduction</p>
       <div
@@ -60,7 +60,7 @@
       </div>
 
     </section>
-    <section class="min-h-screen mb-20">
+    <section class="mb-20 py-20">
       <h2 id="skills" class=" text-center text-2xl font-bold leading-loose">Skills</h2>
       <p class="text-gray-500 text-center mb-10">My technical collection</p>
       <div class="mx-auto max-w-5xl w-5/6">
@@ -96,10 +96,10 @@
       </div>
 
     </section>
-    <section class="mb-20">
+    <section class="mb-20 py-20">
       <h2 id="services" class=" text-center text-2xl font-bold leading-loose">Services</h2>
       <p class="text-gray-500 text-center mb-10">What I offer</p>
-      <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-2 gap-6">
+      <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
         <ServiceSection  v-for="item in services" :key="item.icon"
           :title="item.title"
           :icon="item.icon"
@@ -107,10 +107,74 @@
         />
       </ul>
     </section>
+    <section class="mb-20 py-20">
+      <h2 id="services" class=" text-center text-2xl font-bold leading-loose">Portfolio</h2>
+      <p class="text-gray-500 text-center mb-10">Most recent work</p>
+      <div class="mx-auto relative max-w-4xl px-10">
+        <span id="last" class="text-primary hover:bg-primary/10 rounded-3xl transition z-0 text-4xl absolute inset-y-0 left-2 my-auto grid place-items-center"><i class='bx bxs-chevron-right bx-rotate-180' ></i></span>
+        <span id="next" class="text-primary hover:bg-primary/10 rounded-3xl transition z-0 text-4xl absolute inset-y-0 right-2 my-auto grid place-items-center"><i class='bx bxs-chevron-right'></i></span>
+        <swiper
+          :modules="[Pagination, Navigation]"
+          :navigation="{
+            nextEl: '#next',
+            prevEl: '#last'
+          }"
+          :slides-per-view="1"
+          :space-between="50"
+          :pagination="{
+            clickable: true,
+            dynamicBullets: true
+          }"
+          :loop="true"
+          :auto-height="true"
+        >
+          <swiper-slide>
+          <div class="p-5 lg:pb-20 lg:flex lg:justify-between items-center">
+            <a class=" lg:w-5/12" href="https://shopee.nosegates.com/">
+              <img class="object-cover w-full h-48 rounded-lg shadow-lg" src="../assets/portfolio/img1.png" alt="image1">
+            </a>
+            <div class=" lg:w-6/12 p-4">
+              <h3 class=" text-primary leading-loose font-bold text-2xl">蝦英雄</h3>
+              <p class=" text-gray-500 mb-5">本專案提供使用者貼入蝦皮網址後產生出蝦皮專用短網址,自行撰寫NodeJS後端串接蝦皮官方提供的GraphQL API,前端使用Vue框架撰寫</p>
+              <p>
+                <a href="https://shopee.nosegates.com/" target="_blank" rel="noopener noreferrer" class=" bg-primary p-4 rounded-xl text-white inline-block">
+                  Demo
+                </a>
+              </p>
+            </div>
+          </div>
+          </swiper-slide>
+          <swiper-slide>
+          <div class="p-5 lg:pb-20 lg:flex lg:justify-between items-center">
+            <a class=" lg:w-5/12" href="https://connectshark.github.io/command-palette-tailwindcss/#/">
+              <img class="object-cover w-full h-48 rounded-lg shadow-lg" src="../assets/portfolio/search.png" alt="image1">
+            </a>
+            <div class=" lg:w-6/12 p-4">
+              <h3 class=" text-primary leading-loose font-bold text-2xl">台灣縣市搜尋器</h3>
+              <p class=" text-gray-500 mb-5">本專案專注於客製搜尋器,於頁面中使用按鍵<kbd class="border p-1 rounded">ctrl</kbd> or <kbd class="border p-1 rounded">control</kbd> + <kbd class="border p-1 rounded">k</kbd>即可開啟面板搜尋器,輸入英文中文皆可進入搜尋</p>
+              <p>
+                <a href="https://connectshark.github.io/command-palette-tailwindcss/#/" target="_blank" rel="noopener noreferrer" class=" bg-primary p-4 rounded-xl text-white inline-block">
+                  Demo
+                </a>
+              </p>
+            </div>
+          </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+    </section>
+
+    <section class="mb-20">
+    </section>
   </main>
 </template>
 
 <script setup>
+import { Pagination, Navigation } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 import ServiceSection from '../components/serviceSection.vue'
 import { ref } from 'vue'
 
