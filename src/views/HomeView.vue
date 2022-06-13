@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section id="home" class=" mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
+    <section id="home" class="mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
       <div class=" col-span-2 grid place-items-center md:col-span-1">
         <div class=" space-y-4">
           <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank"
@@ -36,7 +36,7 @@
     </section>
 
     <section class="mb-20 py-20">
-      <h2 id="about" class=" text-center text-2xl font-bold leading-loose">About me</h2>
+      <h2 id="about" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">About me</h2>
       <p class="text-gray-500 text-center mb-10">My introduction</p>
       <div
         class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
@@ -61,7 +61,7 @@
 
     </section>
     <section class="mb-20 py-20">
-      <h2 id="skills" class=" text-center text-2xl font-bold leading-loose">Skills</h2>
+      <h2 id="skills" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Skills</h2>
       <p class="text-gray-500 text-center mb-10">My technical collection</p>
       <div class="mx-auto max-w-5xl w-5/6">
         <div v-for="(skill, index) in skills" :key="skill.title"
@@ -97,7 +97,7 @@
 
     </section>
     <section class="mb-20 py-20">
-      <h2 id="services" class=" text-center text-2xl font-bold leading-loose">Services</h2>
+      <h2 id="services" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Services</h2>
       <p class="text-gray-500 text-center mb-10">What I offer</p>
       <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
         <ServiceSection  v-for="item in services" :key="item.icon"
@@ -108,7 +108,7 @@
       </ul>
     </section>
     <section class="mb-20 py-20">
-      <h2 id="services" class=" text-center text-2xl font-bold leading-loose">Portfolio</h2>
+      <h2 id="portfolio" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Portfolio</h2>
       <p class="text-gray-500 text-center mb-10">Most recent work</p>
       <div class="mx-auto relative max-w-4xl px-10">
         <span id="last" class="text-primary hover:bg-primary/10 rounded-3xl transition z-0 text-4xl absolute inset-y-0 left-2 my-auto grid place-items-center"><i class='bx bxs-chevron-right bx-rotate-180' ></i></span>
@@ -164,7 +164,17 @@
       </div>
     </section>
 
-    <section class="mb-20">
+    <section class="mb-20 py-20 lg:scroll-m-16" id="contact">
+      <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex">
+        <div class=" lg:w-4/6 mb-5 lg:mb-0">
+          <h2 class="text-2xl font-bold leading-loose text-white">You have a new project</h2>
+          <p class="text-white mb-10">Contact me now and get a 10% discount on your new project</p>
+          <button class="p-4 rounded-xl text-primary bg-white">
+            Contact Me <i class='bx bx-send'></i>
+          </button>
+        </div>
+        <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -m-10 bg-no-repeat bg-contain bg-bottom" ></div>
+      </div>
     </section>
   </main>
 </template>
