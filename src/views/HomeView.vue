@@ -35,7 +35,7 @@
       </div>
     </section>
 
-    <section class="mb-20 py-20">
+    <section class="mb-20 py-10">
       <h2 id="about" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">About me</h2>
       <p class="text-gray-500 text-center mb-10">My introduction</p>
       <div
@@ -60,7 +60,7 @@
       </div>
 
     </section>
-    <section class="mb-20 py-20">
+    <section class="mb-20 py-10">
       <h2 id="skills" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Skills</h2>
       <p class="text-gray-500 text-center mb-10">My technical collection</p>
       <div class="mx-auto max-w-5xl w-5/6">
@@ -96,7 +96,7 @@
       </div>
 
     </section>
-    <section class="mb-20 py-20">
+    <section class="mb-20 py-10">
       <h2 id="services" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Services</h2>
       <p class="text-gray-500 text-center mb-10">What I offer</p>
       <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
@@ -107,7 +107,7 @@
         />
       </ul>
     </section>
-    <section class="mb-20 py-20">
+    <section class="mb-20 py-10">
       <h2 id="portfolio" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Portfolio</h2>
       <p class="text-gray-500 text-center mb-10">Most recent work</p>
       <div class="mx-auto relative max-w-4xl px-10">
@@ -164,29 +164,62 @@
       </div>
     </section>
 
-    <section class="mb-20 py-20 lg:scroll-m-16" id="contact">
+    <section class="mb-20 py-10 lg:scroll-m-16" id="contact">
       <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
-          <h2 class="text-2xl font-bold leading-loose text-white">You have a new project</h2>
-          <p class="text-white mb-10">Contact me now and get a 10% discount on your new project</p>
+          <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
+          <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>
           <button class="p-4 rounded-xl text-primary bg-white">
             Contact Me <i class='bx bx-send'></i>
           </button>
         </div>
-        <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -m-10 bg-no-repeat bg-contain bg-bottom" ></div>
+        <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -lg:mt-10 -mb-10 -mx-10 bg-no-repeat bg-contain bg-bottom" ></div>
+      </div>
+    </section>
+    <section class="mb-20 py-20 container">
+      <h2 id="contactme" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Contact Me</h2>
+      <p class="text-gray-500 text-center mb-10">Get in touch</p>
+      <div>
+        <div class="flex items-center w-5/6 mx-auto mb-10" v-for="item in contactList" :key="item.icon">
+          <span class=" shrink-0 mr-4">
+            <i :class="item.icon" class='bx text-3xl text-primary align-middle'></i>
+          </span>
+          <div class="w-full">
+            <h3 class=" text-xl">{{ item.title }}</h3>
+            <p class=" text-gray-500">{{  item.detail }}</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import ServiceSection from '../components/serviceSection.vue'
 import { Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import ServiceSection from '../components/serviceSection.vue'
-import { ref } from 'vue'
+
+const contactList = [
+  {
+    icon: 'bx-phone',
+    title: 'Call Me',
+    detail: '0968-841-641'
+  },
+  {
+    icon: 'bx-mail-send',
+    title: 'Email',
+    detail: 'bobhus394@gmail.com'
+  },
+  {
+    icon: 'bx-map-pin',
+    title: 'Location',
+    detail: 'New Taipei City'
+  }
+]
 
 const services = [
   {

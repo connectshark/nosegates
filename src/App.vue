@@ -6,7 +6,5 @@ import BottomFooter from './components/bottomFooter.vue'
 <template>
 <TopHeader/>
 <router-view />
-<footer>
-  <BottomFooter/>
-</footer>
+<BottomFooter/>
 </template>
