@@ -1,5 +1,5 @@
 <template>
-  <li class=" shadow-lg p-4 pt-20 hover:shadow-sxl transition-shadow">
+  <li class=" shadow-lg p-4 pt-20 hover:shadow-sxl transition-shadow dark:bg-primary/10">
     <p class=" mb-6">
       <i class='bx text-primary text-3xl' :class="props.icon"></i>
     </p>

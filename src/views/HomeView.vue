@@ -29,9 +29,9 @@
         <p class=" text-gray-500 md:leading-loose mb-5">Frontend developer</p>
         <p class="text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing
           quality work.</p>
-        <button class=" bg-primary p-4 rounded-xl text-white">
+        <a class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white" href="#contact">
           Contact Me <i class='bx bx-send'></i>
-        </button>
+        </a>
       </div>
     </section>
 
@@ -44,16 +44,16 @@
           <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
         </figure>
         <div class="md:w-1/2 space-y-10">
-          <p class="text-gray-500">Web developer, with extensive knowledge and years of experience, working in web
+          <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
             technologies and delivering quality work.</p>
           <ul class="w-full flex items-center justify-center">
             <li class=" text-center w-1/3" v-for="(item, i) in experience" :key="i">
               <p class=" text-2xl font-bold leading-relaxed">{{ item.number }}+</p>
-              <p class=" text-gray-500">{{ item.content }}</p>
-              <p class=" text-gray-500">{{ item.last }}</p>
+              <p class=" text-gray-500 dark:text-gray-300">{{ item.content }}</p>
+              <p class=" text-gray-500 dark:text-gray-300">{{ item.last }}</p>
             </li>
           </ul>
-          <button class=" bg-primary p-4 rounded-xl text-white">
+          <button class="hover:opacity-80 bg-primary p-4 rounded-xl text-white">
             Download CV <i class='bx bxs-contact'></i>
           </button>
         </div>
@@ -72,7 +72,7 @@
             </span>
             <div>
               <h3 class=" font-bold text-xl">{{ skill.title }}</h3>
-              <p class=" text-gray-500">{{ skill.subtitle }}</p>
+              <p class=" text-gray-500 dark:text-gray-300">{{ skill.subtitle }}</p>
             </div>
             <span :class="{ '-rotate-180': folderIndex === index }"
               class=" text-center w-1/12 text-primary transition duration-500 ml-auto">
@@ -83,8 +83,8 @@
             enter-active-class="duration-300" leave-active-class="duration-300"
             enter-from-class="opacity-0 -translate-y-3" leave-to-class="opacity-0 -translate-y-3">
             <ul v-show="folderIndex === index" class=" w-full py-4">
-              <li v-for="brand in skill.brands" class=" inline-block mx-4 text-primary hover:scale-110 transition">
-                <i class='bx text-2xl' :class="brand"></i>
+              <li v-for="brand in skill.brands" class="inline-block mx-4 text-primary hover:scale-110 transition">
+                <i class='bx text-3xl' :class="brand"></i>
               </li>
               <template v-if="skill.library">
                 <li v-for="library in skill.library" :key="library" :title="library"
@@ -131,13 +131,13 @@
           <swiper-slide>
           <div class="p-5 lg:pb-20 lg:flex lg:justify-between items-center">
             <a class=" lg:w-5/12" href="https://shopee.nosegates.com/">
-              <img class="object-cover w-full h-48 rounded-lg shadow-lg" src="../assets/portfolio/img1.png" alt="image1">
+              <img class="object-cover w-full rounded-lg shadow-lg" src="../assets/portfolio/img1.png" alt="image1">
             </a>
             <div class=" lg:w-6/12 p-4">
               <h3 class=" text-primary leading-loose font-bold text-2xl">蝦英雄</h3>
               <p class=" text-gray-500 mb-5">本專案提供使用者貼入蝦皮網址後產生出蝦皮專用短網址,自行撰寫NodeJS後端串接蝦皮官方提供的GraphQL API,前端使用Vue框架撰寫</p>
               <p>
-                <a href="https://shopee.nosegates.com/" target="_blank" rel="noopener noreferrer" class=" bg-primary p-4 rounded-xl text-white inline-block">
+                <a href="https://shopee.nosegates.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white inline-block">
                   Demo
                 </a>
               </p>
@@ -153,7 +153,7 @@
               <h3 class=" text-primary leading-loose font-bold text-2xl">台灣縣市搜尋器</h3>
               <p class=" text-gray-500 mb-5">本專案專注於客製搜尋器,於頁面中使用按鍵<kbd class="border p-1 rounded">ctrl</kbd> or <kbd class="border p-1 rounded">control</kbd> + <kbd class="border p-1 rounded">k</kbd>即可開啟面板搜尋器,輸入英文中文皆可進入搜尋</p>
               <p>
-                <a href="https://connectshark.github.io/command-palette-tailwindcss/#/" target="_blank" rel="noopener noreferrer" class=" bg-primary p-4 rounded-xl text-white inline-block">
+                <a href="https://connectshark.github.io/command-palette-tailwindcss/#/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white inline-block">
                   Demo
                 </a>
               </p>
@@ -164,29 +164,29 @@
       </div>
     </section>
 
-    <section class="mb-20 py-10 lg:scroll-m-16" id="contact">
-      <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex">
+    <section class="mb-20 py-10 lg:scroll-m-16">
+      <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
           <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
           <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>
-          <button class="p-4 rounded-xl text-primary bg-white">
+          <a class="p-4 rounded-xl text-primary bg-white" href="https://forms.gle/foySUptVKdx9hjFS9" target="_blank" rel="noopener noreferrer">
             Contact Me <i class='bx bx-send'></i>
-          </button>
+          </a>
         </div>
         <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -lg:mt-10 -mb-10 -mx-10 bg-no-repeat bg-contain bg-bottom" ></div>
       </div>
     </section>
-    <section class="mb-20 py-20 container">
-      <h2 id="contactme" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Contact Me</h2>
+    <section class="mb-20 py-20">
+      <h2 id="contact" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Contact Me</h2>
       <p class="text-gray-500 text-center mb-10">Get in touch</p>
-      <div>
-        <div class="flex items-center w-5/6 mx-auto mb-10" v-for="item in contactList" :key="item.icon">
+      <div class=" container mx-auto px-10 ">
+        <div class="flex items-center mb-10" v-for="item in contactList" :key="item.icon">
           <span class=" shrink-0 mr-4">
             <i :class="item.icon" class='bx text-3xl text-primary align-middle'></i>
           </span>
           <div class="w-full">
             <h3 class=" text-xl">{{ item.title }}</h3>
-            <p class=" text-gray-500">{{  item.detail }}</p>
+            <p class="text-gray-500 dark:text-gray-300">{{  item.detail }}</p>
           </div>
         </div>
       </div>
