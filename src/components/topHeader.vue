@@ -17,11 +17,23 @@
           </a>
         </li>
       </ul>
-      <div class=" space-x-4 text-xl">
-        <button @click="toggleDark">
-          <i class='bx bx-sun' v-if="isDark"></i>
-          <i class='bx bx-moon' v-else></i>
+      <div class="space-x-4 text-xl">
+        <transition
+          mode="out-in"
+          enter-active-class="transition"
+          enter-from-class="translate-y-4 opacity-50"
+          enter-to-class="translate-y-0 opacity-100"
+          leave-active-class="transition"
+          leave-from-class="translate-y-0 opacity-100"
+          leave-to-class="-translate-y-4 opacity-50"
+        >
+        <button v-if="isDark" @click="toggleDark">
+          <i class='bx bx-sun'></i>
         </button>
+        <button v-else @click="toggleDark">
+          <i class='bx bx-moon'></i>
+        </button>
+        </transition>
         <button @click="isOpen = !isOpen" class=" lg:hidden">
           <i class='bx bx-category' :class="{ 'bx-x': isOpen, 'bx-category': !isOpen }"></i>
         </button>

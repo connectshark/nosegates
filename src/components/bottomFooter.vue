@@ -35,7 +35,7 @@ let list = [
   },
   {
     name: 'Contactme',
-    url: '#contactme'
+    url: '#contact'
   }
 ]
 

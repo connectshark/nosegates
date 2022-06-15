@@ -250,7 +250,7 @@ const skills = [
     subtitle: 'More than 3 years',
     icon: 'bx-code-curly',
     brands: ['bxl-javascript', 'bxl-css3', 'bxl-tailwind-css', 'bxl-vuejs', 'bxl-html5', 'bxl-git', 'bxl-sass'],
-    library: ['Phaser', 'Three', 'Babylon', 'Highchart']
+    library: ['PhaserJS', 'ThreeJS', 'BabylonJS', 'HighchartJS', 'DayJS']
   },
   {
     title: 'Backend developer',
