@@ -41,7 +41,7 @@
       <div
         class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
         <figure class="md:w-1/2">
-          <img tg-name="hero-size" tg-to="2" tg-from=".3" tg-step=".01" style="transform: scale(min(var(--hero-size), 1));" class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
+          <img tg-name="hero-size" tg-to="1.7" tg-from=".3" style="transform: scale(min(var(--hero-size), 1));" class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
         </figure>
         <div class="md:w-1/2 space-y-10">
           <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
