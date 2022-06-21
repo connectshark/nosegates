@@ -41,7 +41,7 @@
       <div
         class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
         <figure class="md:w-1/2">
-          <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
+          <img tg-name="hero-size" tg-to="2" tg-from=".3" tg-step=".01" style="transform: scale(min(var(--hero-size), 1));" class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
         </figure>
         <div class="md:w-1/2 space-y-10">
           <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
@@ -165,7 +165,7 @@
     </section>
 
     <section class="mb-20 py-10 lg:scroll-m-16">
-      <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none">
+      <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none  transition">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
           <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
           <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>

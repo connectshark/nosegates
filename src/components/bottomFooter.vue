@@ -1,5 +1,5 @@
 <template>
-<footer class=" bg-primary py-10 dark:bg-black">
+<footer class=" bg-primary py-10 dark:bg-black transition">
   <div class=" container mx-auto px-10 text-white lg:grid lg:grid-cols-12">
     <div class="lg:m-0 mb-5 lg:col-span-4">
       <h2 class=" text-3xl font-bold leading-loose">Chambers</h2>
