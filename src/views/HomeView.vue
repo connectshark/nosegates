@@ -137,8 +137,31 @@
               <h3 class=" text-primary leading-loose font-bold text-2xl">蝦英雄</h3>
               <p class=" text-gray-500 mb-5">本專案提供使用者貼入蝦皮網址後產生出蝦皮專用短網址,自行撰寫NodeJS後端串接蝦皮官方提供的GraphQL API,前端使用Vue框架撰寫</p>
               <p>
-                <a href="https://shopee.nosegates.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white inline-block">
+                <a href="https://shopee.nosegates.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                   Demo
+                </a>
+                <a href="https://github.com/connectshark/shopee-short-link" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                  <i class='bx bxl-github text-2xl align-middle'></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          </swiper-slide>
+          <swiper-slide>
+          <div class="p-5 lg:pb-20 lg:flex lg:justify-between items-center">
+            <a class=" lg:w-5/12" href="https://express-with-linepay.onrender.com/">
+              <img class="object-cover w-full h-48 rounded-lg shadow-lg" src="../assets/portfolio/express-linepay.png" alt="express-linepay">
+            </a>
+            <div class=" lg:w-6/12 p-4">
+              <h3 class=" text-primary leading-loose font-bold text-2xl">linePay付款技術串接</h3>
+              <p class=" text-gray-500 mb-5">使用express後端框架串接測試linePay付款流程全記錄,為全後端技術專案,專案內扣款為測試環境不會扣真實賬戶</p>
+              <p class=" text-gray-500 mb-5">初次開啟需稍等機器啟動</p>
+              <p>
+                <a href="https://express-with-linepay.onrender.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                  Demo
+                </a>
+                <a href="https://github.com/connectshark/express-with-linepay" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                  <i class='bx bxl-github text-2xl align-middle'></i>
                 </a>
               </p>
             </div>
@@ -153,8 +176,11 @@
               <h3 class=" text-primary leading-loose font-bold text-2xl">台灣縣市搜尋器</h3>
               <p class=" text-gray-500 mb-5">本專案專注於客製搜尋器,於頁面中使用按鍵<kbd class="border p-1 rounded">ctrl</kbd> or <kbd class="border p-1 rounded">control</kbd> + <kbd class="border p-1 rounded">k</kbd>即可開啟面板搜尋器,輸入英文中文皆可進入搜尋</p>
               <p>
-                <a href="https://connectshark.github.io/command-palette-tailwindcss/#/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white inline-block">
+                <a href="https://connectshark.github.io/command-palette-tailwindcss/#/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                   Demo
+                </a>
+                <a href="https://github.com/connectshark/command-palette-tailwindcss" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                  <i class='bx bxl-github text-2xl align-middle'></i>
                 </a>
               </p>
             </div>
@@ -202,6 +228,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import App from '../App.vue'
 
 const contactList = [
   {
