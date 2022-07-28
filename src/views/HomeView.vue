@@ -126,6 +126,13 @@ const portfolio = [
     img: '/portfolio/img1.png'
   },
   {
+    link: 'https://line.me/R/ti/p/@848gsxak',
+    title: 'line機器人-超極巨皮卡丘',
+    subtitle: '藉由串接line官方提供SDK的方式應用製作line機器人,主要功能與蝦英雄一樣可以縮短任意蝦皮網址(串接相同後端程式),添加基礎機器人回應訊息,傳入貼圖回應貼圖,傳入"/how"回應基礎使用方式,傳入蝦皮連結回應縮短後蝦皮連結',
+    github: 'https://github.com/connectshark/line-bot-pika',
+    img: '/portfolio/bot-pika.png'
+  },
+  {
     link: 'https://express-with-linepay.onrender.com/',
     title: 'linePay付款技術串接',
     subtitle: '使用express後端框架串接測試linePay付款流程全記錄,為全後端技術專案,專案內扣款為測試環境不會扣真實賬戶,初次開啟需稍等機器啟動',
