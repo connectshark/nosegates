@@ -119,6 +119,13 @@ import ContactSection from '../components/contactSection.vue'
 
 const portfolio = [
   {
+    link: 'https://connectshark.github.io/battery-level-panel/',
+    title: '電池電量顯示面板',
+    subtitle: '專案使用battery api,會顯示開啟裝置的電池狀態,另外新增自訂電量功能,能夠一次檢視各種電量狀態下電池變化',
+    github: 'https://github.com/connectshark/battery-level-panel',
+    img: '/portfolio/battery.png'
+  },
+  {
     link: 'https://shopee.nosegates.com/',
     title: '蝦英雄',
     subtitle: '本專案提供使用者貼入蝦皮網址後產生出蝦皮專用短網址,自行撰寫NodeJS後端串接蝦皮官方提供的GraphQL API,前端使用Vue框架撰寫',
