@@ -77,8 +77,8 @@
       <p class="text-gray-500 text-center mb-10">Most recent work</p>
       <div class="mx-auto relative max-w-4xl px-10">
         <div v-for="item in portfolio" :key="item.link" class="p-5 lg:pb-20 lg:flex lg:justify-between items-center group">
-          <a class=" group-even:order-1 relative group-even:md:bottom-10 group-even:md:right-10 group-odd:md:top-10 group-odd:md:left-10 lg:w-5/12" :href="item.link">
-            <img class="object-cover shadow-lg rounded-lg group-even:md:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:md:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
+          <a class=" group-even:order-1 relative group-even:md:bottom-10 group-even:lg:right-10 group-odd:lg:top-10 group-odd:lg:left-10 lg:w-5/12" :href="item.link">
+            <img class="object-cover shadow-lg rounded-lg group-even:lg:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:lg:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
           </a>
           <div class=" lg:w-6/12 p-4">
             <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
