@@ -27,10 +27,10 @@
           leave-from-class="translate-y-0 opacity-100"
           leave-to-class="-translate-y-4 opacity-50"
         >
-        <button v-if="isDark" @click="toggleDark">
+        <button type="button" v-if="isDark" @click="toggleDark()">
           <i class='bx bx-sun'></i>
         </button>
-        <button v-else @click="toggleDark">
+        <button type="button" v-else @click="toggleDark()">
           <i class='bx bx-moon'></i>
         </button>
         </transition>
@@ -45,15 +45,10 @@
 
 <script setup>
 import { ref } from 'vue'
-const isDark = ref(false)
+import { useDark, useToggle } from '@vueuse/core'
 
-const toggleDark = () => {
-  const root = document.querySelector('html')
-  root.classList.toggle('dark')
-  isDark.value = root.classList.contains('dark')
-}
-
-
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 
 const isOpen = ref(false)
 

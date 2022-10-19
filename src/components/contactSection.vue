@@ -21,17 +21,17 @@
       <input minlength="1" maxlength="30"
         :disabled="loading"
         v-model="formContent.user_name"
-        class="bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="text"
+        class=" dark:placeholder:text-white dark:bg-slate-700 bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="text"
         placeholder="Name" required>
       <input minlength="3" maxlength="40"
         :disabled="loading"
         v-model="formContent.user_email"
-        class="bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="email"
+        class="dark:placeholder:text-white dark:bg-slate-700 bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="email"
         placeholder="Email" required>
       <textarea minlength="1" id="form-content"
         :disabled="loading"
         v-model="formContent.user_content"
-        class="resize-none md:col-span-2 bg-gray-200 focus:bg-white focus:ring-primary focus:ring transition border-none rounded"
+        class="dark:placeholder:text-white dark:bg-slate-700 resize-none md:col-span-2 bg-gray-200 focus:bg-white focus:ring-primary focus:ring transition border-none rounded"
         required placeholder="Content" cols="30" rows="8"></textarea>
       <div v-if="loading">Loading...</div>
       <div v-if="success">Submit Success!!</div>

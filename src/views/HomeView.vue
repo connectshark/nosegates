@@ -26,8 +26,8 @@
       </div>
       <div class=" col-start-2 col-span-10 md:col-span-5">
         <h1 class=" text-4xl font-bold leading-loose">Hi! I'am&nbsp;Chambers</h1>
-        <p class=" text-gray-500 md:leading-loose mb-5">Frontend developer</p>
-        <p class="text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing
+        <p class="dark:text-white text-gray-500 md:leading-loose mb-5">Frontend developer</p>
+        <p class="dark:text-white text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing
           quality work.</p>
         <LinkContainer href="#contact">
           Contact Me <i class='bx bx-send'></i>
@@ -78,7 +78,7 @@
           </a>
           <div class=" md:w-6/12 p-4">
             <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
-            <p class=" text-gray-500 mb-5">{{ item.subtitle }}</p>
+            <p class="dark:text-white text-gray-500 mb-5">{{ item.subtitle }}</p>
             <p>
               <a :href="item.link" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                 Demo
@@ -97,7 +97,7 @@
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
           <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
           <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>
-          <a class="p-4 rounded-xl text-primary bg-white" href="#contact">
+          <a class="hover:opacity-80 dark:bg-primary dark:text-white p-4 rounded-xl text-primary bg-white" href="#contact">
             Contact Me <i class='bx bx-send'></i>
           </a>
         </div>
