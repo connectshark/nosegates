@@ -1,7 +1,4 @@
 <template>
-<section class="mb-20 py-10">
-<h2 id="skills" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Skills</h2>
-<p class="text-gray-500 text-center mb-10">My technical collection</p>
 <div class="mx-auto max-w-5xl w-5/6">
   <div v-for="(skill, index) in skills" :key="skill.title"
     class="w-full mb-10 transition md:inline-block md:w-1/2 md:align-top">
@@ -33,7 +30,6 @@
     </Transition>
   </div>
 </div>
-</section>
 </template>
 
 <script setup>
@@ -50,7 +46,7 @@ const skills = [
     title: 'Backend developer',
     subtitle: 'More than 1 years',
     icon: 'bx-code-block',
-    brands: ['bxl-postgresql', 'bxl-nodejs']
+    brands: ['bxl-nodejs', 'bxl-mongodb']
   },
   {
     title: 'Others',

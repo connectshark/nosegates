@@ -29,15 +29,13 @@
         <p class=" text-gray-500 md:leading-loose mb-5">Frontend developer</p>
         <p class="text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing
           quality work.</p>
-        <a class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white" href="#contact">
+        <LinkContainer href="#contact">
           Contact Me <i class='bx bx-send'></i>
-        </a>
+        </LinkContainer>
       </div>
     </section>
 
-    <section class="mb-20 py-10">
-      <h2 id="about" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">About me</h2>
-      <p class="text-gray-500 text-center mb-10">My introduction</p>
+    <SectionContainer title="About me" subTitle="My introduction" name="about">
       <div
         class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
         <figure class="md:w-1/2">
@@ -58,12 +56,12 @@
           </button>
         </div>
       </div>
+    </SectionContainer>
 
-    </section>
-    <SkillsSection/>
-    <section class="mb-20 py-10">
-      <h2 id="services" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Services</h2>
-      <p class="text-gray-500 text-center mb-10">What I offer</p>
+    <SectionContainer title="Skills" subTitle="My technical collection" name="skills">
+      <SkillsSection/>
+    </SectionContainer>
+    <SectionContainer title="Services" subTitle="What I offer" name="services">
       <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
         <ServiceSection  v-for="item in services" :key="item.icon"
           :title="item.title"
@@ -71,16 +69,14 @@
           :description="item.description"
         />
       </ul>
-    </section>
-    <section class="mb-20 py-10">
-      <h2 id="portfolio" class="lg:scroll-m-16 text-center text-2xl font-bold leading-loose">Portfolio</h2>
-      <p class="text-gray-500 text-center mb-10">Most recent work</p>
+    </SectionContainer>
+    <SectionContainer title="Portfolio" subTitle="Most recent work" name="portfolio">
       <div class="mx-auto relative max-w-4xl px-10">
-        <div v-for="item in portfolio" :key="item.link" class="p-5 lg:pb-20 lg:flex lg:justify-between items-center group">
-          <a class=" group-even:order-1 relative group-even:md:bottom-10 group-even:lg:right-10 group-odd:lg:top-10 group-odd:lg:left-10 lg:w-5/12" :href="item.link">
-            <img class="object-cover shadow-lg rounded-lg group-even:lg:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:lg:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
+        <div v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
+          <a class=" group-even:order-1 md:w-5/12" :href="item.link">
+            <img class="object-cover shadow-lg rounded-lg group-even:md:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:md:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
           </a>
-          <div class=" lg:w-6/12 p-4">
+          <div class=" md:w-6/12 p-4">
             <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
             <p class=" text-gray-500 mb-5">{{ item.subtitle }}</p>
             <p>
@@ -94,21 +90,23 @@
           </div>
         </div>
       </div>
-    </section>
+    </SectionContainer>
 
     <section class="mb-20 py-10 lg:scroll-m-16">
       <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none  transition">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
           <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
           <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>
-          <a class="p-4 rounded-xl text-primary bg-white" href="https://forms.gle/foySUptVKdx9hjFS9" target="_blank" rel="noopener noreferrer">
+          <a class="p-4 rounded-xl text-primary bg-white" href="#contact">
             Contact Me <i class='bx bx-send'></i>
           </a>
         </div>
         <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -lg:mt-10 -mb-10 -mx-10 bg-no-repeat bg-contain bg-bottom" ></div>
       </div>
     </section>
-    <ContactSection />
+    <SectionContainer title="Contact Me" subTitle="Get in touch" name="contact">
+      <ContactSection />
+    </SectionContainer>
   </main>
 </template>
 
@@ -116,6 +114,8 @@
 import ServiceSection from '../components/serviceSection.vue'
 import SkillsSection from '../components/skillsSection.vue'
 import ContactSection from '../components/contactSection.vue'
+import SectionContainer from '../components/container/sectionContainer.vue'
+import LinkContainer from '../components/container/linkContainer.vue'
 
 const portfolio = [
   {
