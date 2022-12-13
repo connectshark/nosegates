@@ -1,7 +1,8 @@
-# nosegates-v2
+# nosegates
 [![GitHub last commit](https://img.shields.io/github/last-commit/connectshark/nosegates-v2.svg?style=flat)](https://github.com/connectshark/nosegates-v2)
 ![GitHub stars](https://img.shields.io/github/stars/connectshark/nosegates-v2.svg?style=social&label=Stars&style=plastic)
 
+![](/readme/cover.png)
 
 個人網站
 
