@@ -48,13 +48,8 @@
 
 
 <script setup>
-import { reactive, ref } from 'vue'
-import emailjs from '@emailjs/browser'
-
-const serviceID = 'default_service'
-const templateID = 'template_pvmit3b'
-
-const publicID = 'hzAph-Kjy8KDvJdFw'
+import { reactive } from 'vue'
+import useMailer from '../composable/useMailer'
 
 const formContent = reactive({
   user_email: '',
@@ -62,37 +57,36 @@ const formContent = reactive({
   user_content: ''
 })
 
-const loading = ref(false)
-const success = ref(false)
-const error = ref(false)
-
 const resetFormContent = () => {
   formContent.user_content = ''
   formContent.user_name = ''
   formContent.user_email = ''
 }
 
+const {
+  loading,
+  success,
+  error,
+  send
+} = useMailer()
 const sendMail = async () => {
-  loading.value = true
-  success.value = false
-  error.value = false
-  try {
-    await emailjs.send(
-      serviceID,
-      templateID,
-      {
-        user_name: formContent.user_name,
-        user_email: formContent.user_email,
-        user_content: formContent.user_content
-      },
-      publicID
-    )
-    success.value = true
-    resetFormContent()
-  } catch (error) {
-    error.value = true
-  }
-  loading.value = false
+  await send([{
+    title: 'Hi 感謝你的聯繫',
+    email: formContent.user_email,
+    content: `
+      HI! 已經收到你填寫的內容
+      通常會在3天內回覆
+    `
+  }, {
+    title: '有人填寫nosegates.com上的表單囉！',
+    email: 'bobhus394@gmail.com',
+    content: `
+      填寫人: ${formContent.user_name}
+      填寫人EMAIL: ${formContent.user_email}
+      填寫內容: ${formContent.user_content}
+    `
+  }])
+  resetFormContent()
 }
 
 const contactList = [
