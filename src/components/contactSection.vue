@@ -48,7 +48,7 @@
 
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, watchEffect } from 'vue'
 import useMailer from '../composable/useMailer'
 
 const formContent = reactive({
@@ -86,8 +86,13 @@ const sendMail = async () => {
       填寫內容: ${formContent.user_content}
     `
   }])
-  resetFormContent()
 }
+
+watchEffect(() => {
+  if (success.value) {
+    resetFormContent()
+  }
+})
 
 const contactList = [
   {
