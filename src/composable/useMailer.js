@@ -49,11 +49,16 @@ const useMailer = () => {
     }
   }
 
+  const wakeUp = async () => {
+    await fetch(MAIL_URI + '/')
+  }
+
   return {
     send,
     loading,
     success,
-    error
+    error,
+    wakeUp
   }
 }
 

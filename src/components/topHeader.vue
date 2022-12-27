@@ -10,7 +10,7 @@
       </router-link>
       <ul :class="{ 'hidden': !isOpen }"
         class=" bg-white dark:bg-slate-900 lg:dark:bg-transparent lg:bg-transparent lg:border-none lg:flex lg:static lg:p-0 lg:rounded-t-none lg:w-auto lg:ml-auto lg:mr-4 grid grid-cols-3 grid-rows-2 gap-4 absolute left-0 w-full p-4 rounded-t-3xl border-t-2 transition bottom-full dark:border-slate-900/50">
-        <li v-for="item in navGroup" :key="item.class">
+        <li v-once v-for="item in navGroup" :key="item.class">
           <a @click="isOpen = false" :href="item.url" class=" p-2 text-center lg:p-0">
             <p class=" lg:hidden text-xl"><i class='bx' :class="item.class"></i></p>
             <p>{{ item.content }}</p>

@@ -24,6 +24,7 @@
         class=" dark:placeholder:text-white dark:bg-slate-700 bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="text"
         placeholder="Name" required>
       <input minlength="3" maxlength="40"
+        @focus.once="wakeUp()"
         :disabled="loading"
         v-model="formContent.user_email"
         class="dark:placeholder:text-white dark:bg-slate-700 bg-gray-200 p-3 focus:bg-white focus:ring-primary focus:ring transition border-none rounded" type="email"
@@ -67,7 +68,8 @@ const {
   loading,
   success,
   error,
-  send
+  send,
+  wakeUp
 } = useMailer()
 const sendMail = async () => {
   await send([{

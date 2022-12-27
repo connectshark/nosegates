@@ -2,7 +2,7 @@
   <main>
     <section id="home" class="mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
       <div class=" col-span-2 grid place-items-center md:col-span-1">
-        <div class=" space-y-4">
+        <div class=" space-y-4" v-once>
           <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank"
             rel="noopener noreferrer">
             <i class='bx text-3xl' :class="btn.icon"></i>
@@ -44,7 +44,7 @@
         <div class="md:w-1/2 space-y-10">
           <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
             technologies and delivering quality work.</p>
-          <ul class="w-full flex items-center justify-center">
+          <ul class="w-full flex items-center justify-center" v-once>
             <li class=" text-center w-1/3" v-for="(item, i) in experience" :key="i">
               <p class=" text-2xl font-bold leading-relaxed">{{ item.number }}+</p>
               <p class=" text-gray-500 dark:text-gray-300">{{ item.content }}</p>
@@ -63,7 +63,7 @@
     </SectionContainer>
     <SectionContainer title="Services" subTitle="What I offer" name="services">
       <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
-        <ServiceSection  v-for="item in services" :key="item.icon"
+        <ServiceSection v-once v-for="item in services" :key="item.icon"
           :title="item.title"
           :icon="item.icon"
           :description="item.description"
@@ -72,7 +72,7 @@
     </SectionContainer>
     <SectionContainer title="Portfolio" subTitle="Most recent work" name="portfolio">
       <div class="mx-auto relative max-w-4xl px-10">
-        <div v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
+        <div v-once v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
           <a class=" group-even:order-1 md:w-5/12" :href="item.link">
             <img class="object-cover shadow-lg rounded-lg group-even:md:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:md:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
           </a>
