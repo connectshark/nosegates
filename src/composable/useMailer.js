@@ -4,28 +4,15 @@ const MAIL_URI = import.meta.env.VITE_MAIL_API_URI
 
 const emailSender = async ({ title, email, content }) => {
   const body = JSON.stringify({ title, content, to: email })
-  return new Promise((resolve, reject) => {
-    fetch(MAIL_URI + `/mail/`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body
-    })
-    .then(res => {
-      if (res.ok) {
-        return res.json()
-      } else {
-        reject(res)
-      }
-    })
-    .then(res => {
-      resolve(res)
-    })
-    .catch(err => {
-      reject(err)
-    })
+  const fetch_response = await fetch(MAIL_URI + `/mail/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body
   })
+  const res = await fetch_response.json()
+  return res
 }
 
 const useMailer = () => {
