@@ -78,7 +78,7 @@
           </a>
           <div class=" md:w-6/12 p-4">
             <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
-            <p class="dark:text-white text-gray-500 mb-5">{{ item.subtitle }}</p>
+            <p class="dark:text-white text-gray-500 mb-5">{{ item.description }}</p>
             <p>
               <a :href="item.link" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                 Demo
@@ -119,39 +119,60 @@ import LinkContainer from '../components/container/linkContainer.vue'
 
 const portfolio = [
   {
+    link: 'https://connectshark.github.io/ip-address-tracker/#/',
+    title: 'IP address tracker',
+    description: 'This project can query IP addresses and display the current IP address on a map, and also query the location of a specific IP address on the map.',
+    github: 'https://github.com/connectshark/ip-address-tracker',
+    img: '/portfolio/ipaddresstracker.png'
+  },
+  {
+    link: 'https://connectshark.github.io/interactive-card-details-form-solution/#/',
+    title: 'Interactive card details form',
+    description: `This project dynamically displays the currently entered credit card information and checks if the user's input information is correct.`,
+    github: 'https://github.com/connectshark/interactive-card-details-form-solution',
+    img: '/portfolio/Interactive-card-details.png'
+  },
+  {
+    link: 'https://connectshark.github.io/countries-with-color-theme-switcher-solution/#/',
+    title: 'REST Countries API with color theme switcher',
+    description: 'This project integrates a national flag API, allowing users to filter and display countries by region and search for information about a single country. Additionally, the project includes a dark mode feature.',
+    github: 'https://github.com/connectshark/countries-with-color-theme-switcher-solution',
+    img: '/portfolio/countries.png'
+  },
+  {
+    link: 'https://connectshark.github.io/multi-steps-form-solution/#/',
+    title: 'Multi Steps Form',
+    description: 'This project demonstrates a multi-step form demo, where users need to fill out each form accurately before proceeding to the next step. The project also includes a responsive design.',
+    github: 'https://github.com/connectshark/multi-steps-form-solution',
+    img: '/portfolio/multiples.png'
+  },
+  {
     link: 'https://connectshark.github.io/battery-level-panel/',
-    title: '電池電量顯示面板',
-    subtitle: '專案使用battery api,會顯示開啟裝置的電池狀態,另外新增自訂電量功能,能夠一次檢視各種電量狀態下電池變化',
+    title: 'Battery Level Panel',
+    description: 'The project utilizes the Battery API to display the battery status of the device. Additionally, it includes a custom battery feature that allows users to view the battery changes across different battery levels.',
     github: 'https://github.com/connectshark/battery-level-panel',
     img: '/portfolio/battery.png'
   },
   {
     link: 'https://shopee.nosegates.com/',
-    title: '蝦英雄',
-    subtitle: '本專案提供使用者貼入蝦皮網址後產生出蝦皮專用短網址,自行撰寫NodeJS後端串接蝦皮官方提供的GraphQL API,前端使用Vue框架撰寫',
+    title: 'Shopee Hero',
+    description: 'This project allows users to generate a Shopee-specific short URL by pasting a Shopee URL. The backend was developed using NodeJS and integrated with the official Shopee GraphQL API, while the frontend was developed using the Vue framework.',
     github: 'https://github.com/connectshark/shopee-short-link',
-    img: '/portfolio/img1.png'
+    img: '/portfolio/shopeehero.png'
   },
   {
-    link: 'https://line.me/R/ti/p/@848gsxak',
-    title: 'line機器人-超極巨皮卡丘',
-    subtitle: '藉由串接line官方提供SDK的方式應用製作line機器人,主要功能與蝦英雄一樣可以縮短任意蝦皮網址(串接相同後端程式),添加基礎機器人回應訊息,傳入貼圖回應貼圖,傳入"/how"回應基礎使用方式,傳入蝦皮連結回應縮短後蝦皮連結',
-    github: 'https://github.com/connectshark/line-bot-pika',
-    img: '/portfolio/bot-pika.png'
+    link: 'https://connectshark.github.io/responsive-coffee-website/index.html',
+    title: 'Responsive coffee website',
+    description: 'This project involves slicing and coding a coffee website, and implementing a responsive design.',
+    github: 'https://github.com/connectshark/responsive-coffee-website',
+    img: '/portfolio/coffeewebsite.png'
   },
   {
-    link: 'https://express-with-linepay.onrender.com/',
-    title: 'linePay付款技術串接',
-    subtitle: '使用express後端框架串接測試linePay付款流程全記錄,為全後端技術專案,專案內扣款為測試環境不會扣真實賬戶,初次開啟需稍等機器啟動',
-    github: 'https://github.com/connectshark/express-with-linepay',
-    img: '/portfolio/express-linepay.png'
-  },
-  {
-    link: 'https://connectshark.github.io/command-palette-tailwindcss/#/',
-    title: '台灣縣市搜尋器',
-    subtitle: '本專案專注於客製搜尋器,於頁面中使用按鍵 ctrl or control + "k"即可開啟面板搜尋器,輸入英文中文皆可進入搜尋',
-    github: 'https://github.com/connectshark/command-palette-tailwindcss',
-    img: '/portfolio/search.png'
+    link: 'https://connectshark.github.io/responsive-gym-website/index.html',
+    title: 'Responsive gym website',
+    description: 'This project involves slicing and coding a fitness center website, and implementing a responsive design.',
+    github: 'https://github.com/connectshark/responsive-gym-website',
+    img: '/portfolio/gymwebsite.png'
   }
 ]
 
@@ -175,7 +196,7 @@ const experience = [
     last: 'experience'
   },
   {
-    number: '20',
+    number: '50',
     content: 'Completed',
     last: 'projects'
   },
