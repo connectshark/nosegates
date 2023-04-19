@@ -51,9 +51,9 @@
               <p class=" text-gray-500 dark:text-gray-300">{{ item.last }}</p>
             </li>
           </ul>
-          <button class="hover:opacity-80 bg-primary p-4 rounded-xl text-white">
-            Download CV <i class='bx bxs-contact'></i>
-          </button>
+        <LinkContainer href="#contact" class=" inline-block">
+          Contact Me <i class='bx bx-send'></i>
+        </LinkContainer>
         </div>
       </div>
     </SectionContainer>
