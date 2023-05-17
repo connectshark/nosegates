@@ -1,5 +1,5 @@
 <template>
-  <li class=" shadow-lg p-4 pt-20 hover:shadow-sxl transition-shadow dark:bg-primary/10">
+  <li class="shadow-lg p-4 pt-20 hover:shadow-sxl transition-shadow dark:bg-primary/10">
     <p class=" mb-6">
       <i class='bx text-primary text-3xl' :class="props.icon"></i>
     </p>
@@ -19,9 +19,9 @@
         <Modal v-show="showModal" :closeModal="closeModal">
           <div class="mb-8 flex items-center justify-between">
             <h4 class="text-xl">{{ props.title }}</h4>
-            <button @click="showModal = false"><i class='bx bx-x-circle text-xl'></i></button>
+            <button @click="showModal = false"><i class='bx bx-x-circle bx-sm'></i></button>
           </div>
-          <p class="text-gray-500 tracking-wider mb-4" v-for="description in props.description"><i
+          <p class="tracking-wider mb-4" v-for="description in props.description"><i
               class='bx bx-check-circle'></i>{{ description }}</p>
         </Modal>
       </transition>

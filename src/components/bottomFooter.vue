@@ -42,7 +42,7 @@ let list = [
 const socialList = [
   {
     icon: 'bxl-facebook',
-    url: 'https://www.facebook.com/EnTeng.Nose'
+    url: 'https://www.facebook.com/nosegates/'
   },
   {
     icon: 'bxl-instagram',
@@ -51,6 +51,10 @@ const socialList = [
   {
     icon: 'bxl-github',
     url: 'https://github.com/connectshark'
+  },
+  {
+    icon: 'bxl-telegram',
+    url: 'https://t.me/nosegates'
   }
 ]
 </script>
