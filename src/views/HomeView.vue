@@ -92,7 +92,7 @@
       </div>
     </SectionContainer>
 
-    <section class="mb-20 py-10 lg:scroll-m-16">
+    <section class="mb-20 py-10 lg:scroll-m-20">
       <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none  transition">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
           <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>

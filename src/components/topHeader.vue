@@ -1,7 +1,7 @@
 <template>
   <header
     class="lg:border-0 lg:sticky lg:bottom-auto lg:top-0 fixed bottom-0 left-0 w-full border-t-2 border-white/20 [@supports(backdrop-filter:blur(0))]:bg-white/50 bg-white/90 [@supports(backdrop-filter:blur(0))]:dark:bg-slate-900/50 dark:bg-slate-900/90 [@supports(backdrop-filter:blur(0))]:backdrop-blur-2xl z-10">
-    <nav class=" container mx-auto lg:p-3 p-5 flex justify-between items-center">
+    <nav class=" container mx-auto lg:py-6 p-4 flex justify-between items-center">
       <router-link to="/">
         <figure class=" w-8 inline-block align-middle">
           <img loading="lazy" src="../assets/logo-s.png" alt="logo">
@@ -9,9 +9,9 @@
         <h2 class=" font-bold inline-block align-middle">Chambers</h2>
       </router-link>
       <ul :class="{ 'hidden': !isOpen }"
-        class=" bg-white dark:bg-slate-900 lg:dark:bg-transparent lg:bg-transparent lg:border-none lg:flex lg:static lg:p-0 lg:rounded-t-none lg:w-auto lg:ml-auto lg:mr-4 grid grid-cols-3 grid-rows-2 gap-4 absolute left-0 w-full p-4 rounded-t-3xl border-t-2 transition bottom-full dark:border-slate-900/50">
+        class="bg-white dark:bg-slate-900 lg:dark:bg-transparent lg:bg-transparent lg:border-none lg:flex lg:static lg:p-0 lg:rounded-t-none lg:w-auto lg:ml-auto lg:mr-4 grid grid-cols-3 grid-rows-2 gap-8 absolute left-0 w-full p-4 rounded-t-3xl border-t-2 transition bottom-full dark:border-slate-900/50">
         <li v-once v-for="item in navGroup" :key="item.class">
-          <a @click="isOpen = false" :href="item.url" class=" p-2 text-center lg:p-0">
+          <a @click="isOpen = false" :href="item.url" class="p-2 text-center lg:p-0">
             <p class=" lg:hidden text-xl"><i class='bx' :class="item.class"></i></p>
             <p>{{ item.content }}</p>
           </a>
