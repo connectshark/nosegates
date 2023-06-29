@@ -51,9 +51,11 @@
               <p class=" text-gray-500 dark:text-gray-300">{{ item.last }}</p>
             </li>
           </ul>
-        <LinkContainer href="#contact" class=" inline-block">
-          Contact Me <i class='bx bx-send'></i>
-        </LinkContainer>
+        <div class=" text-center md:text-left">
+          <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/%E8%91%89%E6%81%A9%E9%A8%B0resume.pdf" class=" inline-block">
+            Download Resume <i class='bx bx-download'></i>
+          </LinkContainer>
+        </div>
         </div>
       </div>
     </SectionContainer>
