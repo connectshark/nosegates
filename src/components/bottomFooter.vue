@@ -17,7 +17,7 @@
         </a>
       </li>
     </ul>
-    <p class=" pt-20 pb-10 text-sm lg:col-start-5 lg:col-span-4"><i class='bx bx-copyright'></i>2022 All Rights Reserved</p>
+    <p class=" pt-20 pb-10 text-sm lg:col-start-5 lg:col-span-4"><i class='bx bx-copyright'></i>{{ year }} All Rights Reserved</p>
   </div>
 </footer>
 </template>
@@ -38,6 +38,8 @@ let list = [
     url: '#contact'
   }
 ]
+
+const year = new Date().getFullYear()
 
 const socialList = [
   {

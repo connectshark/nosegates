@@ -6,6 +6,7 @@
   :root {
     --color-orange: 236 119 95;
     --color-purple: 122 106 225;
-    --color-primary: var(--color-orange);
+    --color-copper: 159 116 127;
+    --color-primary: var(--color-copper);
   }
 }

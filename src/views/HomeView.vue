@@ -1,28 +1,18 @@
 <template>
+<DefaultLayout>
   <main>
-    <section id="home" class="mx-auto container grid grid-cols-12 pt-5 mb-20 items-center">
-      <div class=" col-span-2 grid place-items-center md:col-span-1">
+    <section id="home" class="mx-auto container grid grid-cols-12 gap-2 pt-5 mb-20 items-center">
+      <div class="col-span-2 grid place-items-center md:col-span-1">
         <div class=" space-y-4" v-once>
-          <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank"
-            rel="noopener noreferrer">
+          <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank" rel="noopener noreferrer">
             <i class='bx text-3xl' :class="btn.icon"></i>
           </a>
         </div>
       </div>
       <div class=" col-span-10 md:col-span-5 md:order-2">
-        <svg class=" fill-primary" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <mask fill="" id="mask0" mask-type="alpha">
-            <path
-              d="M62.1,-57.5C77.1,-47,83.7,-23.5,83.6,-0.1C83.5,23.2,76.6,46.4,61.5,58.2C46.4,69.9,23.2,70.2,3.2,66.9C-16.7,63.7,-33.5,56.9,-47.5,45.2C-61.6,33.5,-72.9,16.7,-75.6,-2.7C-78.3,-22.2,-72.4,-44.4,-58.4,-54.9C-44.4,-65.4,-22.2,-64.3,0.7,-65C23.5,-65.6,47,-68.1,62.1,-57.5Z"
-              transform="translate(100 100)" />
-          </mask>
-          <g mask="url(#mask0)">
-            <path
-              d="M62.1,-57.5C77.1,-47,83.7,-23.5,83.6,-0.1C83.5,23.2,76.6,46.4,61.5,58.2C46.4,69.9,23.2,70.2,3.2,66.9C-16.7,63.7,-33.5,56.9,-47.5,45.2C-61.6,33.5,-72.9,16.7,-75.6,-2.7C-78.3,-22.2,-72.4,-44.4,-58.4,-54.9C-44.4,-65.4,-22.2,-64.3,0.7,-65C23.5,-65.6,47,-68.1,62.1,-57.5Z"
-              transform="translate(100 100)" />
-            <image class=" w-36" x="30" y="30" xlink:href="../assets/backup/section2.png" />
-          </g>
-        </svg>
+        <div class="rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] bg-primary overflow-hidden aspect-square">
+          <img class=" object-contain object-top w-full" src="../assets/backup/hero.png" alt="">
+        </div>
       </div>
       <div class=" col-start-2 col-span-10 md:col-span-5">
         <h1 class=" text-4xl font-bold leading-loose">Hi! I'am&nbsp;Chambers</h1>
@@ -36,10 +26,12 @@
     </section>
 
     <SectionContainer title="About me" subTitle="My introduction" name="about">
-      <div
-        class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
-        <figure class="md:w-1/2">
-          <img tg-name="hero-size" tg-to="1.7" tg-from=".3" style="transform: scale(min(var(--hero-size), 1));" class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
+      <div class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
+        <figure ref="target" :class="[
+          { 'translate-y-0 blur-none scale-100': isSectionShow },
+          { 'blur-xl translate-y-5 scale-50': !isSectionShow }
+        ]" class="md:w-1/2 duration-1000 transition-all ease-in-out">
+          <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
         </figure>
         <div class="md:w-1/2 space-y-10">
           <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
@@ -110,16 +102,39 @@
       <ContactSection />
     </SectionContainer>
   </main>
+</DefaultLayout>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import DefaultLayout from '../layouts/default.vue'
 import ServiceSection from '../components/serviceSection.vue'
 import SkillsSection from '../components/skillsSection.vue'
 import ContactSection from '../components/contactSection.vue'
 import SectionContainer from '../components/container/sectionContainer.vue'
 import LinkContainer from '../components/container/linkContainer.vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+
+const target = ref(null)
+const isSectionShow = ref(false)
+
+useIntersectionObserver(
+  target,
+  ([{ isIntersecting }]) => {
+    isSectionShow.value = isIntersecting
+  },
+  { rootMargin: '-20px 0px -20px 0px' }
+)
 
 const portfolio = [
+  {
+    link: 'https://www.npmjs.com/package/prodia-ai',
+    title: 'Prodia-AI npm package',
+    description: `Your gateway to seamless Prodia API integration. This GitHub repository simplifies accessing Prodia's APIs, offering a user-friendly interface for effortless integration.`,
+    github: 'https://github.com/connectshark/prodia-ai',
+    img: '/portfolio/prodiai.png'
+  },
   {
     link: 'https://connectshark.github.io/ip-address-tracker/#/',
     title: 'IP address tracker',
