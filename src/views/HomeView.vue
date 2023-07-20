@@ -11,7 +11,7 @@
       </div>
       <div class=" col-span-10 md:col-span-5 md:order-2">
         <div class="rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] bg-primary overflow-hidden aspect-square">
-          <img class=" object-contain object-top w-full" src="../assets/backup/hero.png" alt="">
+          <img class="object-contain object-bottom w-full" src="../assets/backup/hero.png" alt="">
         </div>
       </div>
       <div class=" col-start-2 col-span-10 md:col-span-5">
@@ -68,7 +68,7 @@
       <div class="mx-auto relative max-w-4xl px-10">
         <div v-once v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
           <a class=" group-even:order-1 md:w-5/12" :href="item.link">
-            <img class="object-cover shadow-lg rounded-lg group-even:md:shadow-[.5rem_.5rem_.9rem_#a3a3a3] group-odd:md:shadow-[-.5rem_.5rem_.9rem_#a3a3a3]" :src="item.img" alt="image1">
+            <BlurImg :src="item.img" />
           </a>
           <div class=" md:w-6/12 p-4">
             <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
@@ -113,6 +113,7 @@ import SkillsSection from '../components/skillsSection.vue'
 import ContactSection from '../components/contactSection.vue'
 import SectionContainer from '../components/container/sectionContainer.vue'
 import LinkContainer from '../components/container/linkContainer.vue'
+import BlurImg from '../components/blurImg.vue'
 import { useIntersectionObserver } from '@vueuse/core'
 
 
