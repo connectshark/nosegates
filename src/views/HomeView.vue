@@ -11,12 +11,12 @@
       </div>
       <div class=" col-span-10 md:col-span-5 md:order-2">
         <div class="rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] bg-primary overflow-hidden aspect-square">
-          <img class="object-contain object-bottom w-full" src="../assets/backup/hero.png" alt="">
+          <img class="object-contain h-full object-bottom w-full" src="../assets/backup/hero.png" alt="">
         </div>
       </div>
       <div class=" col-start-2 col-span-10 md:col-span-5">
-        <h1 class=" text-4xl font-bold leading-loose">Hi! I'am&nbsp;Chambers</h1>
-        <p class="dark:text-white text-gray-500 md:leading-loose mb-5">Frontend developer</p>
+        <h1 class=" text-4xl font-bold leading-loose font-ubuntu">Hi! I'am&nbsp;Chambers</h1>
+        <p class="dark:text-white text-gray-500 md:leading-loose mb-5 font-bold">Frontend developer</p>
         <p class="dark:text-white text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing
           quality work.</p>
         <LinkContainer href="#contact">
@@ -71,8 +71,8 @@
             <BlurImg :src="item.img" />
           </a>
           <div class=" md:w-6/12 p-4">
-            <h3 class=" text-primary leading-loose font-bold text-2xl">{{ item.title }}</h3>
-            <p class="dark:text-white text-gray-500 mb-5">{{ item.description }}</p>
+            <h3 class=" text-primary leading-loose font-bold text-2xl font-ubuntu">{{ item.title }}</h3>
+            <p class="dark:text-white text-gray-500 mb-5 whitespace-pre-line">{{ item.description }}</p>
             <p>
               <a :href="item.link" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                 Demo
@@ -89,8 +89,8 @@
     <section class="mb-20 py-10 lg:scroll-m-20">
       <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none  transition">
         <div class=" lg:w-4/6 mb-5 lg:mb-0">
-          <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white">You have a new project</h2>
-          <p class="text-white mb-10 tracking-tighter">Contact me now and get a 10% discount on your new project</p>
+          <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white font-ubuntu">You have a new project</h2>
+          <p class="text-white mb-10">Contact me now and get a 10% discount on your new project</p>
           <a class="hover:opacity-80 dark:bg-primary dark:text-white p-4 rounded-xl text-primary bg-white" href="#contact">
             Contact Me <i class='bx bx-send'></i>
           </a>
@@ -129,6 +129,13 @@ useIntersectionObserver(
 )
 
 const portfolio = [
+  {
+    link: 'https://ai-image-generator-wheat.vercel.app',
+    title: 'AIPicker',
+    description: `This website serves as an innovative AI-driven graphical platform that enables users to swiftly register and commence their utilization through their Google accounts.\nBy simply inputting a selection of prompts, the AI will autonomously generate suitable images based on the provided content, eliminating the need for any drawing skills or software.`,
+    github: 'https://github.com/connectshark/ai-image-picker',
+    img: 'https://cdn.jsdelivr.net/gh/connectshark/ai-image-picker@latest/readme/cover.png'
+  },
   {
     link: 'https://www.npmjs.com/package/prodia-ai',
     title: 'Prodia-AI npm package',
@@ -191,6 +198,13 @@ const portfolio = [
     description: 'This project involves slicing and coding a fitness center website, and implementing a responsive design.',
     github: 'https://github.com/connectshark/responsive-gym-website',
     img: '/portfolio/gymwebsite.png'
+  },
+  {
+    link: 'https://nosegates.com',
+    title: 'This website',
+    description: 'Just this website.',
+    github: 'https://github.com/connectshark/nosegates',
+    img: '/__og_image__/og.png'
   }
 ]
 

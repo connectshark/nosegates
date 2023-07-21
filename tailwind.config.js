@@ -12,12 +12,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      'nunito': [`'Ubuntu'`, `'Noto Sans TC'`, 'sans-serif', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas']
+      'ubuntu': [`'Ubuntu'`, `'Noto Sans TC'`, 'sans-serif', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas'],
+      'poppins': [`'Poppins'`, `'Noto Sans TC'`, 'sans-serif', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas']
     }
-  },
-  plugins: [
-    require('@tailwindcss/forms')({
-      strategy: 'base'
-    })
-  ]
+  }
 }
