@@ -1,6 +1,6 @@
 # nosegates
-[![GitHub last commit](https://img.shields.io/github/last-commit/connectshark/nosegates-v2.svg?style=flat)](https://github.com/connectshark/nosegates)
-![GitHub stars](https://img.shields.io/github/stars/connectshark/nosegates-v2.svg?style=social&label=Stars&style=plastic)
+[![GitHub last commit](https://img.shields.io/github/last-commit/connectshark/nosegates.svg?style=flat)](https://github.com/connectshark/nosegates)
+![GitHub stars](https://img.shields.io/github/stars/connectshark/nosegates.svg?style=social&label=Stars&style=plastic)
 
 [![](/readme/cover.png)](https://nosegates.com/)
 
