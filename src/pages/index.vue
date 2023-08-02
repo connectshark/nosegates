@@ -43,10 +43,13 @@
                 <p class=" text-gray-500 dark:text-gray-300">{{ item.last }}</p>
               </li>
             </ul>
-          <div class=" text-center md:text-left">
-            <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/%E8%91%89%E6%81%A9%E9%A8%B0resume.pdf" class=" inline-block">
-              Download Resume <i class='bx bx-download'></i>
-            </LinkContainer>
+          <div class="text-center md:text-left">
+            <p class="mb-4">
+              <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/en-Chambers.pdf" class=" inline-block">Download Resume <i class='bx bx-download'></i></LinkContainer>
+            </p>
+            <p>
+              <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/en-Chambers.pdf" class=" inline-block">下載履歷 <i class='bx bx-download'></i></LinkContainer>
+            </p>
           </div>
           </div>
         </div>
