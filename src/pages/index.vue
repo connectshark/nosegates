@@ -48,7 +48,7 @@
               <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/en-Chambers.pdf" class=" inline-block">Download Resume <i class='bx bx-download'></i></LinkContainer>
             </p>
             <p>
-              <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/en-Chambers.pdf" class=" inline-block">下載履歷 <i class='bx bx-download'></i></LinkContainer>
+              <LinkContainer href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/tw-Chambers.pdf" class=" inline-block">下載履歷 <i class='bx bx-download'></i></LinkContainer>
             </p>
           </div>
           </div>
