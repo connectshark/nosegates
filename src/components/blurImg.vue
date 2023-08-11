@@ -23,7 +23,7 @@ useIntersectionObserver(
     isSectionShow.value = isIntersecting
   },
   {
-    rootMargin: '-50px 0px -50px 0px'
+    rootMargin: '0px 0px -90px 0px'
   }
 )
 </script>
