@@ -6,7 +6,12 @@ import VueRouter from 'unplugin-vue-router/vite'
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-  plugins: [vue(), VueRouter()],
+  plugins: [
+    vue(),
+    VueRouter({
+      importMode: (filepath) => filepath.includes('index') ? 'sync' : 'async'
+    })
+  ],
   server: {
     port: 8082
   },
