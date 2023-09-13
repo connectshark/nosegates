@@ -77,10 +77,10 @@
               <h3 class=" text-primary leading-loose font-bold text-2xl font-ubuntu">{{ item.title }}</h3>
               <p class="dark:text-white text-gray-500 mb-5 whitespace-pre-line">{{ item.description }}</p>
               <p>
-                <a :href="item.link" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                <a :href="item.link" target="_blank" rel="noopener noreferrer" aria-label="Read more about my portfolio" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                   Demo
                 </a>
-                <a :href="item.github" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
+                <a :href="item.github" target="_blank" aria-label="Read more about my portfolio on github" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                   <i class='bx bxl-github text-2xl align-middle'></i>
                 </a>
               </p>

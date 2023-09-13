@@ -27,14 +27,14 @@
           leave-from-class="translate-y-0 opacity-100"
           leave-to-class="-translate-y-4 opacity-50"
         >
-        <button type="button" v-if="isDark" @click="toggleDark()">
+        <button type="button" v-if="isDark" @click="toggleDark()" aria-label="sun button">
           <i class='bx bx-sun'></i>
         </button>
-        <button type="button" v-else @click="toggleDark()">
+        <button type="button" v-else @click="toggleDark()" aria-label="moon button">
           <i class='bx bx-moon'></i>
         </button>
         </transition>
-        <button @click="isOpen = !isOpen" class=" lg:hidden">
+        <button @click="isOpen = !isOpen" class=" lg:hidden" aria-label="mobile menu button">
           <i class='bx bx-category' :class="{ 'bx-x': isOpen, 'bx-category': !isOpen }"></i>
         </button>
       </div>
