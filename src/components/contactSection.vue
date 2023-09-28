@@ -31,7 +31,7 @@ const contactList = [
   {
     icon: 'bx-mail-send',
     title: 'Email',
-    detail: 'bobhus394@gmail.com',
+    detail: 'contact@nosegates.com',
     href: 'mailto:'
   },
   {
