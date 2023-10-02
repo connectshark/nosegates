@@ -73,9 +73,9 @@
             <a class=" group-even:order-1 md:w-5/12" :href="item.link" target="_blank">
               <BlurImg :src="item.img" />
             </a>
-            <div class=" md:w-6/12 p-4">
-              <h3 class=" text-primary leading-loose font-bold text-2xl font-ubuntu">{{ item.title }}</h3>
-              <p class="dark:text-white text-gray-500 mb-5 whitespace-pre-line">{{ item.description }}</p>
+            <div class=" md:w-6/12 py-4">
+              <h3 class=" text-primary font-bold text-xl/relaxed font-ubuntu">{{ item.title }}</h3>
+              <p class="dark:text-white text-gray-500 mb-5 whitespace-pre-line text-sm">{{ item.description }}</p>
               <p>
                 <a :href="item.link" target="_blank" rel="noopener noreferrer" aria-label="Read more about my portfolio" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
                   Demo
