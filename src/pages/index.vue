@@ -27,10 +27,7 @@
   
       <SectionContainer title="About me" subTitle="My introduction" name="about">
         <div class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
-          <figure ref="target" :class="[
-            { 'translate-y-0 blur-none scale-100': isSectionShow },
-            { 'blur-xl translate-y-5 scale-50': !isSectionShow }
-          ]" class="md:w-1/2 duration-1000 transition-all ease-in-out">
+          <figure class="md:w-1/2 scroller-watcher">
             <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
           </figure>
           <div class="md:w-1/2 space-y-10">
@@ -106,10 +103,9 @@
       </SectionContainer>
     </main>
   </DefaultLayout>
-  </template>
+</template>
   
-  <script setup>
-  import { ref } from 'vue'
+<script setup>
   import DefaultLayout from '../layouts/default.vue'
   import ServiceSection from '../components/serviceSection.vue'
   import SkillsSection from '../components/skillsSection.vue'
@@ -117,19 +113,7 @@
   import SectionContainer from '../components/container/sectionContainer.vue'
   import LinkContainer from '../components/container/linkContainer.vue'
   import BlurImg from '../components/blurImg.vue'
-  import { useIntersectionObserver } from '@vueuse/core'
   
-  
-  const target = ref(null)
-  const isSectionShow = ref(false)
-  
-  useIntersectionObserver(
-    target,
-    ([{ isIntersecting }]) => {
-      isSectionShow.value = isIntersecting
-    },
-    { rootMargin: '-40px 0px -40px 0px' }
-  )
   
   const portfolio = [
     {
@@ -251,4 +235,6 @@
       icon: 'bxl-linkedin'
     }
   ]
-  </script>
+</script>
+
+<style src="../assets/css/scroller.css"></style>

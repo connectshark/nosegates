@@ -1,0 +1,12 @@
+.scroller-watcher {
+  animation: scroller linear;
+  animation-timeline: view();
+  filter: blur(10px);
+  scale: .5;
+}
+@keyframes scroller {
+  30%, 100% {
+    filter: blur(0);
+    scale: 1;
+  }
+}
