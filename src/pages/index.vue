@@ -24,6 +24,21 @@
           </LinkContainer>
         </div>
       </section>
+      <SectionContainer title="Vue.js developer" subTitle="I'm a certified Vue.js developer." name="certificate">
+        <div class=" max-w-3xl w-4/5 mx-auto">
+          <figure class="dark:hidden">
+            <img src="../assets/certificate/light.jpg" alt="light certificate">
+          </figure>
+          <figure class=" hidden dark:block">
+            <img src="../assets/certificate/dark.jpg" alt="dark certificate">
+          </figure>
+          <div class="text-center">
+            <p class=" pt-20">
+              <a class=" underline" href="https://certificates.dev/vuejs/certificates/9aae9c9c-1198-4f71-97ff-1973dad68d02" target="_blank" rel="noopener noreferrer">View on certificates.dev.<i class='bx bx-link-external'></i></a>
+            </p>
+          </div>
+        </div>
+      </SectionContainer>
   
       <SectionContainer title="About me" subTitle="My introduction" name="about">
         <div class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
