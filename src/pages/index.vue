@@ -225,7 +225,7 @@
   
   const experience = [
     {
-      number: '04',
+      number: '05',
       content: 'Years',
       last: 'experience'
     },
