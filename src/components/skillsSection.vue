@@ -37,14 +37,14 @@ import { ref } from 'vue'
 const skills = [
   {
     title: 'Frontend developer',
-    subtitle: 'More than 4 years',
+    subtitle: 'More than 5 years',
     icon: 'bx-code-curly',
     brands: ['bxl-javascript', 'bxl-css3', 'bxl-tailwind-css', 'bxl-vuejs', 'bxl-html5', 'bxl-git', 'bxl-sass'],
     library: ['PhaserJS', 'ThreeJS', 'BabylonJS', 'HighchartJS', 'DayJS']
   },
   {
     title: 'Backend developer',
-    subtitle: 'More than 2 years',
+    subtitle: 'More than 3 years',
     icon: 'bx-code-block',
     brands: ['bxl-nodejs', 'bxl-mongodb']
   },
