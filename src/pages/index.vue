@@ -2,26 +2,27 @@
 <section id="home" class="mx-auto container grid grid-cols-12 gap-2 pt-5 mb-20 items-center">
   <div class="col-span-2 grid place-items-center md:col-span-1">
     <div class=" space-y-4" v-once>
-      <a v-for="btn in socials" :key="btn.icon" class=" block text-primary" :href="btn.link" target="_blank" rel="noopener noreferrer">
+      <a v-for="btn in socials" :key="btn.icon" class=" block text-primary/80 hover:text-primary" :href="btn.link" target="_blank" rel="noopener noreferrer">
         <i class='bx text-3xl' :class="btn.icon"></i>
       </a>
     </div>
   </div>
   <div class="col-span-10 md:col-span-5 md:order-2 p-4">
     <div class="rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] bg-primary overflow-hidden aspect-square">
-      <img class="object-contain h-full object-bottom w-full" src="../assets/backup/hero.png" alt="nosegates">
+      <img class=" object-scale-down h-full object-bottom w-full" src="../assets/main.png" alt="nosegates">
     </div>
   </div>
   <div class=" col-start-2 col-span-10 md:col-span-5">
-    <h1 class=" text-4xl font-bold leading-loose font-ubuntu">Hi! I'am&nbsp;Chambers</h1>
+    <h1 class=" text-4xl font-bold leading-loose font-ubuntu">Hi! I'am&nbsp;<span class=" bg-clip-text text-transparent bg-gradient-to-br from-primary to-sky-900 dark:to-sky-50">Chambers</span></h1>
     <p class="dark:text-white text-gray-500 md:leading-loose mb-5 font-bold">Frontend developer</p>
     <p class="dark:text-white text-gray-500 md:leading-relaxed mb-10">High Level experience in web development knowledge, producing quality work.</p>
-    <a class="hover:opacity-80 cursor-pointer transition bg-primary p-4 rounded-xl text-white" href="#contact">
-      Contact Me <i class='bx bx-send'></i>
-    </a>
+    <a class="hover:opacity-80 cursor-pointer transition bg-primary p-4 rounded-xl text-white active:scale-95" href="#contact">Contact Me</a>
   </div>
 </section>
-<SectionContainer title="Vue.js developer" subTitle="I'm a certified Vue.js developer." name="certificate">
+
+<section class="mb-20 py-10">
+  <h2 id="certificate" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Vue.js developer</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">I'm a certified Vue.js developer.</p>
   <div class=" max-w-3xl w-4/5 mx-auto">
     <figure class="dark:hidden">
       <img src="../assets/certificate/light.jpg" alt="light certificate">
@@ -35,43 +36,35 @@
       </p>
     </div>
   </div>
-</SectionContainer>
-
-<SectionContainer title="About me" subTitle="My introduction" name="about">
-  <div class=" max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
-    <figure class="md:w-1/2 scroller-watcher">
-      <img class="rounded-2xl object-fill max-w-xs mx-auto" loading="lazy" src="../assets/hero.jpeg" alt="hero">
+</section>
+<section class="mb-20 py-10">
+  <h2 id="about" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">About me</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">My introduction</p>
+  <div class="max-w-5xl w-4/5 mx-auto space-y-10 md:space-x-10 flex items-center justify-center flex-col md:flex-row">
+    <figure class="md:w-1/2 scroller-watcher blur-2xl scale-50">
+      <img class="rounded-2xl object-cover max-w-xs mx-auto" loading="lazy" src="../assets/hero.webp" alt="hero">
     </figure>
     <div class="md:w-1/2 space-y-10">
-      <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web
-        technologies and delivering quality work.</p>
-      <ul class="w-full flex items-center justify-center" v-once>
+      <p class="text-gray-500 dark:text-gray-300">Web developer, with extensive knowledge and years of experience, working in web technologies and delivering quality work.</p>
+      <ul class="w-full flex items-center justify-center">
         <li class=" text-center w-1/3" v-for="(item, i) in experience" :key="i">
-          <p class=" text-2xl font-bold leading-relaxed">{{ item.number }}+</p>
+          <p class=" text-4xl font-bold leading-relaxed">{{ item.number }}+</p>
           <p class=" text-gray-500 dark:text-gray-300">{{ item.content }}</p>
           <p class=" text-gray-500 dark:text-gray-300">{{ item.last }}</p>
         </li>
       </ul>
-    <div class="text-center md:text-left">
-      <p class="mb-10">
-        <a class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white" href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/en-Chambers.pdf" target="_blank">
-          Download Resume <i class='bx bx-download'></i>
-        </a>
-      </p>
-      <p>
-        <a class="hover:opacity-80 transition bg-primary p-4 rounded-xl text-white" href="https://cdn.jsdelivr.net/gh/connectshark/resume@latest/tw-Chambers.pdf" target="_blank">
-          下載履歷 <i class='bx bx-download'></i>
-        </a>
-      </p>
-    </div>
     </div>
   </div>
-</SectionContainer>
+</section>
 
-<SectionContainer title="Skills" subTitle="My technical collection" name="skills">
+<section class="mb-20 py-10">
+  <h2 id="skills" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Skills</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">My technical collection</p>
   <SkillsSection/>
-</SectionContainer>
-<SectionContainer title="Services" subTitle="What I offer" name="services">
+</section>
+<section class="mb-20 py-10">
+  <h2 id="services" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Services</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">What I offer</p>
   <ul class=" w-5/6 mx-auto max-w-3xl grid grid-cols-2 grid-rows-1 gap-6">
     <ServiceSection v-once v-for="item in services" :key="item.icon"
       :title="item.title"
@@ -79,20 +72,20 @@
       :description="item.description"
     />
   </ul>
-</SectionContainer>
-<SectionContainer title="Portfolio" subTitle="Most recent work" name="portfolio">
+</section>
+<section class="mb-20 py-10">
+  <h2 id="portfolio" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Portfolio</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">Most recent work</p>
   <div class="mx-auto relative max-w-4xl px-10">
     <div v-once v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
       <a class=" group-even:order-1 md:w-5/12" :href="item.link" target="_blank">
-        <BlurImg :src="item.img" />
+        <img class=" aspect-video object-top object-cover scroller-watcher blur-2xl scale-50 shadow-lg rounded-lg" loading="lazy" :src="item.img" alt="project preview">
       </a>
       <div class=" md:w-6/12 py-4">
         <h3 class=" text-primary font-bold text-xl/relaxed font-ubuntu">{{ item.title }}</h3>
         <p class="dark:text-white text-gray-500 mb-5 whitespace-pre-line text-sm">{{ item.description }}</p>
         <p>
-          <a :href="item.link" target="_blank" rel="noopener noreferrer" aria-label="Read more about my portfolio" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
-            Demo
-          </a>
+          <a :href="item.link" target="_blank" rel="noopener noreferrer" aria-label="Read more about my portfolio" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">Demo</a>
           <a :href="item.github" target="_blank" aria-label="Read more about my portfolio on github" rel="noopener noreferrer" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 mx-2">
             <i class='bx bxl-github bx-sm align-middle'></i>
           </a>
@@ -100,33 +93,58 @@
       </div>
     </div>
   </div>
-</SectionContainer>
+</section>
 
 <section class="mb-20 py-10 lg:scroll-m-20">
-  <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-r from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none  transition">
+  <div class=" max-w-4xl w-5/6 rounded-3xl mx-auto bg-gradient-to-tr from-primary to-primary/70 p-10 lg:flex dark:bg-black dark:bg-none transition">
     <div class=" lg:w-4/6 mb-5 lg:mb-0">
-      <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white font-ubuntu">You have a new project</h2>
-      <p class="text-white mb-10">Contact me now and get a 10% discount on your new project</p>
-      <a class="hover:opacity-80 dark:bg-primary dark:text-white p-4 rounded-xl text-primary bg-white" href="#contact">
-        Contact Me <i class='bx bx-send'></i>
-      </a>
+      <h2 class="text-2xl font-bold leading-loose tracking-tighter text-white font-ubuntu">Your company is hiring, and I’m looking!</h2>
+      <p class="text-white mb-10">Let’s chat about how we can grow together.</p>
+      <a class="hover:opacity-80 dark:bg-primary dark:text-white p-4 rounded-xl text-primary bg-white" href="#contact">Contact Me <i class='bx bx-send'></i></a>
     </div>
-    <div class="lg:w-2/6 bg-[url('/s4.png')] py-40 lg:p-30  lg:ml-0 -lg:mt-10 -mb-10 -mx-10 bg-no-repeat bg-contain bg-bottom" ></div>
   </div>
 </section>
-<SectionContainer title="Contact Me" subTitle="Get in touch" name="contact">
-  <ContactSection />
-</SectionContainer>
+<section class="mb-20 py-10">
+  <h2 id="contact" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Contact Me</h2>
+  <p class="dark:text-white text-gray-500 text-center mb-10">Get in touch</p>
+  <div class=" text-center space-x-4">
+    <a v-for="btn in contacts" class="hover:opacity-80 transition bg-primary py-2 px-3 rounded-xl text-white inline-block leading-8 active:scale-95" :href="btn.url">
+      <i class='bx bx-sm align-middle' :class="btn.icon"/>
+    </a>
+  </div>
+</section>
 </template>
 
 <script setup>
 import ServiceSection from '../components/serviceSection.vue'
 import SkillsSection from '../components/skillsSection.vue'
-import ContactSection from '../components/contactSection.vue'
-import SectionContainer from '../components/container/sectionContainer.vue'
-import BlurImg from '../components/blurImg.vue'
+
+const contacts = [
+  {
+    url: 'mailto:me@nosegates.com',
+    icon: 'bx-mail-send'
+  },
+  {
+    url: 'https://t.me/nosegates',
+    icon: 'bxl-telegram'
+  }
+]
 
 const portfolio = [
+  {
+    link: 'https://famiice-map.pages.dev',
+    title: 'Famiice Map',
+    description: `An easy way to quickly check if nearby FamilyMart stores have ice cream available.`,
+    github: 'https://github.com/connectshark/famiice-map',
+    img: 'https://cdn.jsdelivr.net/gh/connectshark/famiice-map@latest/readme/cover.png'
+  },
+  {
+    link: 'https://threads.nosegates.com',
+    title: 'Threads social share link',
+    description: `Share directly to the Threads platform with just one click from your website. Effortlessly publish your content to reach a wider audience, increasing engagement and visibility.`,
+    github: 'https://github.com/connectshark/threads-social-share-link',
+    img: 'https://cdn.jsdelivr.net/gh/connectshark/threads-social-share-link@latest/readme/cover.png'
+  },
   {
     link: 'https://unsplash-viewer.pages.dev',
     title: 'Unsplash Viewer',
@@ -254,5 +272,3 @@ const socials = [
   }
 ]
 </script>
-
-<style src="../assets/css/scroller.css"></style>

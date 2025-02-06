@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import tailwindcss from '@tailwindcss/vite'
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
@@ -12,7 +13,8 @@ export default defineConfig({
     VueRouter({
       importMode: (filepath) => filepath.includes('index') ? 'sync' : 'async'
     }),
-    VueDevTools()
+    VueDevTools(),
+    tailwindcss()
   ],
   server: {
     port: 8080,

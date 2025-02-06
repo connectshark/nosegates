@@ -1,25 +1,33 @@
 {
   "name": "nosegates",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "個人網站前端頁面",
+  "type": "module",
+  "author": {
+    "name": "Chambers Yeh",
+    "url": "https://github.com/connectshark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connectshark/nosegates"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.3",
     "@vueuse/core": "^10.9.0",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "pinia": "^2.3.1",
+    "tailwindcss": "^4.0.3",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "unplugin-vue-router": "^0.8.5",
-    "vite": "^5.2.7",
-    "vite-plugin-vue-devtools": "^7.0.25"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "unplugin-vue-router": "^0.11.2",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.7.0"
   }
 }
