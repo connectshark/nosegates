@@ -160,11 +160,11 @@ const portfolio = [
     img: '/portfolio/prodiai.png'
   },
   {
-    link: 'https://connectshark.github.io/ip-address-tracker',
-    title: 'IP address tracker',
-    description: 'This project can query IP addresses and display the current IP address on a map, and also query the location of a specific IP address on the map.',
-    github: 'https://github.com/connectshark/ip-address-tracker',
-    img: '/portfolio/ipaddresstracker.png'
+    link: 'https://remote-job-dashboard.pages.dev',
+    title: 'Remote Job Dashboard',
+    description: 'This project is a remote job dashboard that allows users to search for remote jobs by keyword and location. It also provides a dark mode feature.',
+    github: 'https://github.com/connectshark/remote-job-dashboard',
+    img: 'https://cdn.jsdelivr.net/gh/connectshark/remote-job-dashboard@main/readme/cover.png'
   },
   {
     link: 'https://connectshark.github.io/interactive-card-details-form-solution',
