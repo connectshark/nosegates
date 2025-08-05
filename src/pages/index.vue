@@ -76,7 +76,8 @@
 <section class="mb-20 py-10">
   <h2 id="portfolio" class="lg:scroll-m-20 text-center text-2xl font-bold leading-loose font-ubuntu">Portfolio</h2>
   <p class="dark:text-white text-gray-500 text-center mb-10">Most recent work</p>
-  <div class="mx-auto relative max-w-4xl px-10">
+  <div v-if="loading">loading</div>
+  <div v-else class="mx-auto relative max-w-4xl px-10">
     <div v-once v-for="item in portfolio" :key="item.link" class="p-5 md:pb-20 md:flex md:justify-between items-center group">
       <a class=" group-even:order-1 md:w-5/12" :href="item.link" target="_blank">
         <img class=" aspect-video object-top object-cover scroller-watcher blur-2xl scale-50 shadow-lg rounded-lg" loading="lazy" :src="item.img" alt="project preview">
@@ -116,6 +117,7 @@
 </template>
 
 <script setup>
+import useFetch from '@/composables/useFetch'
 import ServiceSection from '../components/serviceSection.vue'
 import SkillsSection from '../components/skillsSection.vue'
 
@@ -130,106 +132,11 @@ const contacts = [
   }
 ]
 
-const portfolio = [
-  {
-    link: 'https://famiice-map.pages.dev',
-    title: 'Famiice Map',
-    description: `An easy way to quickly check if nearby FamilyMart stores have ice cream available.`,
-    github: 'https://github.com/connectshark/famiice-map',
-    img: 'https://cdn.jsdelivr.net/gh/connectshark/famiice-map@latest/readme/cover.png'
-  },
-  {
-    link: 'https://threads.nosegates.com',
-    title: 'Threads social share link',
-    description: `Share directly to the Threads platform with just one click from your website. Effortlessly publish your content to reach a wider audience, increasing engagement and visibility.`,
-    github: 'https://github.com/connectshark/threads-social-share-link',
-    img: 'https://cdn.jsdelivr.net/gh/connectshark/threads-social-share-link@latest/readme/cover.png'
-  },
-  {
-    link: 'https://unsplash-viewer.pages.dev',
-    title: 'Unsplash Viewer',
-    description: `This is an image search website integrated with the Unsplash API, allowing users to quickly search, browse images, and directly copy image URLs—simple and efficient.`,
-    github: 'https://github.com/connectshark/unsplash-viewer',
-    img: 'https://cdn.jsdelivr.net/gh/connectshark/unsplash-viewer@latest/readme/cover.png'
-  },
-  {
-    link: 'https://www.npmjs.com/package/prodia-ai',
-    title: 'Prodia-AI npm package',
-    description: `Your gateway to seamless Prodia API integration. This GitHub repository simplifies accessing Prodia's APIs, offering a user-friendly interface for effortless integration.`,
-    github: 'https://github.com/connectshark/prodia-ai',
-    img: '/portfolio/prodiai.png'
-  },
-  {
-    link: 'https://remote-job-dashboard.pages.dev',
-    title: 'Remote Job Dashboard',
-    description: 'This project is a remote job dashboard that allows users to search for remote jobs by keyword and location. It also provides a dark mode feature.',
-    github: 'https://github.com/connectshark/remote-job-dashboard',
-    img: 'https://cdn.jsdelivr.net/gh/connectshark/remote-job-dashboard@main/readme/cover.png'
-  },
-  {
-    link: 'https://connectshark.github.io/interactive-card-details-form-solution',
-    title: 'Interactive card details form',
-    description: `This project dynamically displays the currently entered credit card information and checks if the user's input information is correct.`,
-    github: 'https://github.com/connectshark/interactive-card-details-form-solution',
-    img: '/portfolio/Interactive-card-details.png'
-  },
-  {
-    link: 'https://connectshark.github.io/countries-with-color-theme-switcher-solution',
-    title: 'REST Countries API with color theme switcher',
-    description: 'This project integrates a national flag API, allowing users to filter and display countries by region and search for information about a single country. Additionally, the project includes a dark mode feature.',
-    github: 'https://github.com/connectshark/countries-with-color-theme-switcher-solution',
-    img: '/portfolio/countries.png'
-  },
-  {
-    link: 'https://connectshark.github.io/multi-steps-form-solution',
-    title: 'Multi Steps Form',
-    description: 'This project demonstrates a multi-step form demo, where users need to fill out each form accurately before proceeding to the next step. The project also includes a responsive design.',
-    github: 'https://github.com/connectshark/multi-steps-form-solution',
-    img: '/portfolio/multiples.png'
-  },
-  {
-    link: 'https://connectshark.github.io/battery-level-panel',
-    title: 'Battery Level Panel',
-    description: 'The project utilizes the Battery API to display the battery status of the device. Additionally, it includes a custom battery feature that allows users to view the battery changes across different battery levels.',
-    github: 'https://github.com/connectshark/battery-level-panel',
-    img: '/portfolio/battery.png'
-  },
-  {
-    link: 'https://shopee.nosegates.com',
-    title: 'Shopee Hero',
-    description: 'This project allows users to generate a Shopee-specific short URL by pasting a Shopee URL. The backend was developed using NodeJS and integrated with the official Shopee GraphQL API, while the frontend was developed using the Vue framework.',
-    github: 'https://github.com/connectshark/shopee-short-link',
-    img: '/portfolio/shopeehero.png'
-  },
-  {
-    link: 'https://connectshark.github.io/responsive-personal-orange-portfolio',
-    title: 'Responsive Personal Orange Portfolio',
-    description: 'This project coding a personal portfolio website, and implementing a responsive design.',
-    github: 'https://github.com/connectshark/responsive-personal-orange-portfolio',
-    img: 'https://cdn.jsdelivr.net/gh/connectshark/responsive-personal-orange-portfolio@latest/readme/demo.png'
-  },
-  {
-    link: 'https://connectshark.github.io/responsive-coffee-website/index.html',
-    title: 'Responsive coffee website',
-    description: 'This project involves slicing and coding a coffee website, and implementing a responsive design.',
-    github: 'https://github.com/connectshark/responsive-coffee-website',
-    img: '/portfolio/coffeewebsite.png'
-  },
-  {
-    link: 'https://connectshark.github.io/responsive-gym-website/index.html',
-    title: 'Responsive gym website',
-    description: 'This project involves slicing and coding a fitness center website, and implementing a responsive design.',
-    github: 'https://github.com/connectshark/responsive-gym-website',
-    img: '/portfolio/gymwebsite.png'
-  },
-  {
-    link: 'https://nosegates.com',
-    title: 'This website',
-    description: 'Just this website.',
-    github: 'https://github.com/connectshark/nosegates',
-    img: '/__og_image__/og.png'
-  }
-]
+const API_URL = import.meta.env.VITE_API_URL
+const {
+  result: portfolio,
+  loading
+} = useFetch(API_URL)
 
 const services = [
   {
