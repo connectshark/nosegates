@@ -1,11 +1,32 @@
-<script setup>
-</script>
-
 <template>
-<div class="min-h-screen text-center bg-linear-0/oklch to-primary/30 grid place-content-center">
-  <h1 class=" text-4xl/loose font-bold">404</h1>
-  <div class="">
-    <router-link to="/" replace class=" underline">Back home</router-link>
+  <div class="pt-20 w-fit mx-auto">
+    <FuzzyText
+      text="404"
+      :font-size="140"
+      font-weight="900"
+      color="#000"
+      :enable-hover="true"
+      :base-intensity="0.18"
+      :hover-intensity="0.5"
+    />
   </div>
-</div>
+  
+  <div class="w-fit mx-auto">
+    <FuzzyText
+      text="Not Found"
+      :font-size="60"
+      font-weight="900"
+      color="#000"
+      :enable-hover="true"
+      :base-intensity="0.18"
+      :hover-intensity="0.5"
+    />
+  </div>
+  <div class="text-center py-20">
+    <router-link class="hover:underline " to="/">回首頁</router-link>
+  </div>
 </template>
+
+<script setup lang="ts">
+  import FuzzyText from "../components/FuzzyText/FuzzyText.vue"
+</script>

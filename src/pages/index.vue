@@ -14,8 +14,19 @@
       </div>
     </div>
     <div class=" col-start-2 col-span-10 md:col-span-5">
-      <h1 class=" text-4xl font-bold leading-loose font-ubuntu">Hi! I'am&nbsp;<span
-          class=" bg-clip-text text-transparent bg-gradient-to-br from-primary to-sky-900 dark:to-sky-50">Chambers</span>
+      <h1>
+        <SplitText
+          text="Hi! I'am Chambers"
+          className=" text-4xl font-bold font-ubuntu"
+          :delay="30"
+          :duration="0.6"
+          ease="power3.out"
+          split-type="chars"
+          :from="{ opacity: 0, y: 40 }"
+          :to="{ opacity: 1, y: 0 }"
+          :threshold="0.1"
+          root-margin="-100px"
+        />
       </h1>
       <p class="dark:text-white text-gray-500 md:leading-loose mb-5 font-bold">Frontend developer</p>
       <p class="dark:text-white text-gray-500 md:leading-relaxed mb-10">High Level experience in web development
@@ -135,6 +146,7 @@
 import useFetch from '@/composables/useFetch'
 import ServiceSection from '../components/serviceSection.vue'
 import SkillsSection from '../components/skillsSection.vue'
+import SplitText from "../components/SplitText/SplitText.vue"
 
 const contacts = [
   {
