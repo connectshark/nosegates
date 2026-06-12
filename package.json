@@ -17,17 +17,16 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "gsap": "^3.14.2",
+    "@tailwindcss/vite": "^4.3.0",
+    "gsap": "^3.15.0",
     "pinia": "^3.0.4",
     "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.3",
+    "@vitejs/plugin-vue": "^6.0.7",
     "tailwindcss": "^4.1.18",
-    "unplugin-vue-router": "^0.19.2",
-    "vite": "^7.3.0",
-    "vite-plugin-vue-devtools": "^8.0.5"
+    "vite": "^7.3.5",
+    "vite-plugin-vue-devtools": "^8.1.2"
   }
 }
